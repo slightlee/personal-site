@@ -18,7 +18,8 @@ const title = `${work.data.title} | personal-site`;
 ---
 
 <BaseLayout title={title} description={work.data.summary}>
-  <main class="page-shell detail-shell">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <main class="page-shell detail-shell" id="main-content">
     <nav class="breadcrumb" aria-label="返回导航">
       <a href="/#works">返回作品列表</a>
     </nav>

@@ -59,8 +59,11 @@
       "title": "实现 UI 视觉与响应式样式",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:31:46+08:00",
+      "completed_at": "2026-05-16T07:34:01+08:00",
+      "note": "manual_t05_pass"
     },
     {
       "task_id": "personal-site-t06",

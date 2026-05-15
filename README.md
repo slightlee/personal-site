@@ -31,6 +31,7 @@ pnpm run e2e
 - 作品详情页由 `src/pages/work/[slug].astro` 从 Markdown 生成。
 - 全局样式维护在 `src/styles/global.css`。
 - 静态资源维护在 `public/`。
+- UI 样式契约由 `tests/ui-styles.test.mjs` 保护，重点覆盖响应式、focus 和圆角限制。
 
 ## Harness 入口
 

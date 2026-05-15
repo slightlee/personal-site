@@ -6,6 +6,7 @@ const checks = [
   ["page language", 'lang="zh-CN"'],
   ["document title", "<title>personal-site</title>"],
   ["profile name", "Ming Li"],
+  ["skip link", "跳到主要内容"],
   ["works section", "代表作品"],
   ["work detail link", "/work/portfolio-system/"],
   ["contact link", "mailto:hello@example.com"],
