@@ -7,7 +7,7 @@ settings:
 dependencies:
   astro:
     specifier: ^5.14.0
-    version: 5.18.1(typescript@5.9.3)
+    version: 5.18.1(typescript@5.9.3)(yaml@2.9.0)
 
 devDependencies:
   '@astrojs/check':
@@ -21,7 +21,10 @@ devDependencies:
     version: 5.9.3
   vitest:
     specifier: ^3.2.4
-    version: 3.2.4
+    version: 3.2.4(yaml@2.9.0)
+  yaml:
+    specifier: ^2.8.0
+    version: 2.9.0
 
 packages:
 
@@ -1263,7 +1266,7 @@ packages:
       std-env: 3.10.0
       test-exclude: 7.0.2
       tinyrainbow: 2.0.0
-      vitest: 3.2.4
+      vitest: 3.2.4(yaml@2.9.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1292,7 +1295,7 @@ packages:
       '@vitest/spy': 3.2.4
       estree-walker: 3.0.3
       magic-string: 0.30.21
-      vite: 7.3.3
+      vite: 7.3.3(yaml@2.9.0)
     dev: true
 
   /@vitest/pretty-format@3.2.4:
@@ -1484,7 +1487,7 @@ packages:
       js-tokens: 10.0.0
     dev: true
 
-  /astro@5.18.1(typescript@5.9.3):
+  /astro@5.18.1(typescript@5.9.3)(yaml@2.9.0):
     resolution: {integrity: sha512-m4VWilWZ+Xt6NPoYzC4CgGZim/zQUO7WFL0RHCH0AiEavF1153iC3+me2atDvXpf/yX4PyGUeD8wZLq1cirT3g==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
@@ -1544,7 +1547,7 @@ packages:
       unist-util-visit: 5.1.0
       unstorage: 1.17.5
       vfile: 6.0.3
-      vite: 6.4.2
+      vite: 6.4.2(yaml@2.9.0)
       vitefu: 1.1.3(vite@6.4.2)
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -3710,7 +3713,7 @@ packages:
       vfile-message: 4.0.3
     dev: false
 
-  /vite-node@3.2.4:
+  /vite-node@3.2.4(yaml@2.9.0):
     resolution: {integrity: sha512-EbKSKh+bh1E1IFxeO0pg1n4dvoOTt0UDiXMd/qn++r98+jPO1xtJilvXldeuQ8giIB5IkpjCgMleHMNEsGH6pg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -3719,7 +3722,7 @@ packages:
       debug: 4.4.3
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 7.3.3
+      vite: 7.3.3(yaml@2.9.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -3735,7 +3738,7 @@ packages:
       - yaml
     dev: true
 
-  /vite@6.4.2:
+  /vite@6.4.2(yaml@2.9.0):
     resolution: {integrity: sha512-2N/55r4JDJ4gdrCvGgINMy+HH3iRpNIz8K6SFwVsA+JbQScLiC+clmAxBgwiSPgcG9U15QmvqCGWzMbqda5zGQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -3781,11 +3784,12 @@ packages:
       postcss: 8.5.14
       rollup: 4.60.4
       tinyglobby: 0.2.16
+      yaml: 2.9.0
     optionalDependencies:
       fsevents: 2.3.3
     dev: false
 
-  /vite@7.3.3:
+  /vite@7.3.3(yaml@2.9.0):
     resolution: {integrity: sha512-/4XH147Ui7OGTjg3HbdWe5arnZQSbfuRzdr9Ec7TQi5I7R+ir0Rlc9GIvD4v0XZurELqA035KVXJXpR61xhiTA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
@@ -3831,6 +3835,7 @@ packages:
       postcss: 8.5.14
       rollup: 4.60.4
       tinyglobby: 0.2.16
+      yaml: 2.9.0
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
@@ -3843,10 +3848,10 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 6.4.2
+      vite: 6.4.2(yaml@2.9.0)
     dev: false
 
-  /vitest@3.2.4:
+  /vitest@3.2.4(yaml@2.9.0):
     resolution: {integrity: sha512-LUCP5ev3GURDysTWiP47wRRUpLKMOfPh+yKTx3kVIEiu5KOMeqzpnYNsKyOoVrULivR8tLcks4+lga33Whn90A==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -3894,8 +3899,8 @@ packages:
       tinyglobby: 0.2.16
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
-      vite: 7.3.3
-      vite-node: 3.2.4
+      vite: 7.3.3(yaml@2.9.0)
+      vite-node: 3.2.4(yaml@2.9.0)
       why-is-node-running: 2.3.0
     transitivePeerDependencies:
       - jiti
@@ -4172,7 +4177,6 @@ packages:
     resolution: {integrity: sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==}
     engines: {node: '>= 14.6'}
     hasBin: true
-    dev: true
 
   /yargs-parser@21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}

@@ -20,8 +20,11 @@
       "title": "建立个人资料与 Markdown 内容模型",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:15:54+08:00",
+      "completed_at": "2026-05-16T07:20:54+08:00",
+      "note": "manual_t02_pass"
     },
     {
       "task_id": "personal-site-t03",

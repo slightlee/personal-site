@@ -6,7 +6,7 @@
 
 - Astro 静态站点。
 - TypeScript 严格配置。
-- Markdown Content Collections 将在内容模型任务中接入。
+- Astro Content Collections 负责作品 Markdown frontmatter 校验。
 - Vitest 用于基础测试和覆盖率。
 
 ## 本地命令
@@ -25,9 +25,9 @@ pnpm run e2e
 
 ## 内容维护
 
-- 个人资料计划维护在 `src/data/profile.ts`。
+- 个人资料维护在 `src/data/profile.ts`。
 - 站点基础元数据维护在 `src/lib/site-metadata.ts`。
-- 作品内容计划维护在 `src/content/works/*.md`。
+- 作品内容维护在 `src/content/works/*.md`。
 - 全局样式维护在 `src/styles/global.css`。
 - 静态资源维护在 `public/`。
 

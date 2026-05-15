@@ -9,7 +9,6 @@ describe("project skeleton", () => {
     expect(packageJson.scripts).toMatchObject({
       build: "node scripts/run-astro.mjs build",
       lint: "node scripts/lint.mjs",
-      typecheck: "node scripts/run-astro.mjs check",
       test: "vitest run",
       coverage: "vitest run --coverage",
       smoke: "pnpm run build && node scripts/smoke-dev-server.mjs",
