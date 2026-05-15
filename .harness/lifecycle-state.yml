@@ -10,9 +10,9 @@ project:
   task_branch_prefix: "feature-"
 
 lifecycle:
-  current_state: "task_queue_created"
+  current_state: "planning_baseline_committed"
   allowed_next_states:
-    - "planning_baseline_committed"
+    - "implementation_ready"
 
 confirmations:
   project_goal:
@@ -48,10 +48,10 @@ artifacts:
   task_queue: "task-modeling/task-queue.json"
 
 baseline:
-  planning_committed: false
-  commit_sha: ""
-  committed_by: ""
-  committed_at: ""
+  planning_committed: true
+  commit_sha: "37b3d7106319299cc6b99fc93ac6249d256e22d0"
+  committed_by: "agent"
+  committed_at: "2026-05-15"
 
 execution:
   business_code_allowed: false
