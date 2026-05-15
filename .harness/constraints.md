@@ -59,6 +59,7 @@ project_shell_created
 -> task_breakdown_confirmed
 -> task_queue_created
 -> planning_baseline_committed
+-> planning_baseline_pushed
 -> implementation_ready
 -> task_execution_started
 ```
@@ -78,8 +79,12 @@ project_shell_created
 - `task_queue_created` 后必须先提交规划基线，再进入 `implementation_ready`。
 - 规划基线必须至少包含 `.harness/`、PRD、技术方案、UI 设计决策或文档、任务拆解文档和 `task-modeling/task-queue.json`。
 - 规划基线 SHA 可通过第二个治理提交写回 `.harness/lifecycle-state.yml`，但第二个提交仍不得包含业务代码。
+- 企业级默认要求规划基线 push 到远程基线分支；未完成 `planning_baseline_pushed` 前，不允许进入 `implementation_ready`。
+- `baseline.push_policy=required` 时，必须记录 `baseline.planning_pushed=true`、`baseline.remote`、`baseline.remote_branch` 和 `baseline.pushed_at`。
+- `baseline.push_policy=deferred` 只允许用于离线、远端未开通或内部审批未完成场景，必须填写 `baseline.push_deferred_reason`。
 - 如果项目声明了独立远程仓库，业务项目目录必须是独立 Git 仓库根目录；不允许把业务项目提交到模板仓库或父仓库。
 - 未记录 `baseline.planning_committed=true` 和 `baseline.commit_sha` 前，不允许执行 task queue。
+- 未确认远程基线分支包含 `baseline.commit_sha` 前，不允许执行 task queue。
 - 未保持项目工作区干净前，不允许开始领取任务。
 - 未创建任务分支前，不允许执行任务。
 - 未配置 `cmd_git_push` 和 `cmd_pr_open` 前，不允许把任务标记为完成交付。
@@ -94,6 +99,7 @@ project_shell_created
 - UI 设计是否需要；需要则记录确认人和确认时间，不需要则记录跳过原因。
 - 任务拆解确认人和确认时间。
 - 规划基线提交 SHA、提交人和提交时间。
+- 规划基线 push 远端、远端分支和 push 时间；如延期 push，必须记录延期原因。
 - 允许进入实现阶段的明确结论。
 
 ## 6. 执行原则
