@@ -2,15 +2,15 @@
 # 复制到业务项目 `.harness/project-manifest.yml`，先填写项目名、路径、远端策略和门禁命令。
 # Bootstrap 阶段不执行 task queue；确认链路完成后再生成 task-modeling/task-queue.json。
 
-language: unknown
-profile: bootstrap
+language: node
+profile: astro-static-site
 
-code_paths: src
+code_paths: src,scripts,vitest.config.mjs
 test_paths: tests
 
-task_id: "bootstrap"
-milestone_id: "bootstrap"
-slice_id: "project-governance"
+task_id: "personal-site-t01"
+milestone_id: "m1-personal-site"
+slice_id: "s1-project-skeleton"
 actor: agent
 risk_level: LOW
 
@@ -60,12 +60,12 @@ coverage_threshold: 80
 strict_mode: true
 security_network_fail_open: false
 
-cmd_lint: ""
-cmd_typecheck: ""
-cmd_smoke: ""
-cmd_test: ""
-cmd_coverage: ""
-cmd_e2e: ""
+cmd_lint: "pnpm run lint"
+cmd_typecheck: "pnpm run typecheck"
+cmd_smoke: "pnpm run smoke"
+cmd_test: "pnpm run test"
+cmd_coverage: "pnpm run coverage"
+cmd_e2e: "pnpm run e2e"
 cmd_security: ""
 cmd_git_push: "git push -u origin $(git branch --show-current)"
 cmd_pr_open: "gh pr create --base develop --head $(git branch --show-current) --fill"

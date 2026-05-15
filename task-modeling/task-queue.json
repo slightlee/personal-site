@@ -7,8 +7,11 @@
       "title": "搭建 Astro 项目骨架与 README",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-15T23:30:36+08:00",
+      "completed_at": "2026-05-15T23:37:55+08:00",
+      "note": "manual_t01_pass"
     },
     {
       "task_id": "personal-site-t02",

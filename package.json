@@ -1,0 +1,26 @@
+{
+  "name": "personal-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/run-astro.mjs dev",
+    "build": "node scripts/run-astro.mjs build",
+    "preview": "node scripts/run-astro.mjs preview",
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "node scripts/run-astro.mjs check",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "smoke": "pnpm run build && node scripts/smoke-dev-server.mjs",
+    "e2e": "pnpm run build && node scripts/e2e-personal-site.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.14.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import { contactHref, siteMetadata } from "../lib/site-metadata";
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content={siteMetadata.description}
+    />
+    <title>{siteMetadata.title}</title>
+  </head>
+  <body>
+    <main class="shell">
+      <p class="eyebrow">Personal Site</p>
+      <h1>个人网站项目骨架已就绪</h1>
+      <p class="lead">
+        当前阶段完成 Astro 基础工程、脚本入口和 harness manifest 配置。
+      </p>
+      <a class="action" href={contactHref()}>联系入口占位</a>
+    </main>
+  </body>
+</html>
