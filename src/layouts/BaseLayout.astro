@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+import { siteMetadata } from "../lib/site-metadata";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = siteMetadata.title,
+  description = siteMetadata.description,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

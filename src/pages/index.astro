@@ -1,27 +1,95 @@
 ---
-import "../styles/global.css";
-import { contactHref, siteMetadata } from "../lib/site-metadata";
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../data/profile";
+import { contactHref } from "../lib/site-metadata";
+import { workSlugFromId } from "../lib/work-slug";
+
+const works = (await getCollection("works"))
+  .filter((work) => work.data.featured)
+  .sort((left, right) => right.data.date.valueOf() - left.data.date.valueOf());
 ---
 
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content={siteMetadata.description}
-    />
-    <title>{siteMetadata.title}</title>
-  </head>
-  <body>
-    <main class="shell">
-      <p class="eyebrow">Personal Site</p>
-      <h1>个人网站项目骨架已就绪</h1>
-      <p class="lead">
-        当前阶段完成 Astro 基础工程、脚本入口和 harness manifest 配置。
+<BaseLayout>
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Personal Site</p>
+        <h1 id="hero-title">{profile.name}</h1>
+        <p class="headline">{profile.headline}</p>
+        <p class="lead">{profile.intro}</p>
+        <div class="actions" aria-label="主要操作">
+          <a class="button primary" href={contactHref(profile.email)}>联系我</a>
+          <a class="button secondary" href="#works">查看作品</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="个人概要">
+        <p class="panel-label">Location</p>
+        <p>{profile.location}</p>
+        <p class="panel-label">Focus</p>
+        <p>{profile.skills.slice(0, 3).join(" / ")}</p>
+      </aside>
+    </section>
+
+    <section class="section" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">把想法落成可靠的软件</h2>
+      </div>
+      <p>
+        我关注内容型产品、前端架构、自动化交付和测试策略。首版个人网站通过结构化数据和 Markdown
+        内容维护，让作品更新保持轻量、可审查、可持续。
       </p>
-      <a class="action" href={contactHref()}>联系入口占位</a>
-    </main>
-  </body>
-</html>
+    </section>
+
+    <section class="section" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2 id="skills-title">核心能力</h2>
+      </div>
+      <ul class="tag-list">
+        {profile.skills.map((skill) => <li>{skill}</li>)}
+      </ul>
+    </section>
+
+    <section class="section" id="works" aria-labelledby="works-title">
+      <div class="section-heading">
+        <p class="eyebrow">Works</p>
+        <h2 id="works-title">代表作品</h2>
+      </div>
+      <div class="works-grid">
+        {
+          works.map((work) => (
+            <article class="work-card">
+              <p class="work-meta">
+                {work.data.role} · {work.data.date.getFullYear()}
+              </p>
+              <h3>
+                <a href={`/work/${workSlugFromId(work.id)}/`}>{work.data.title}</a>
+              </h3>
+              <p>{work.data.summary}</p>
+              <ul class="tag-list compact" aria-label={`${work.data.title} 技术标签`}>
+                {work.data.tags.map((tag) => <li>{tag}</li>)}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section contact" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">保持联系</h2>
+      </div>
+      <p>欢迎通过邮件或公开链接联系我，讨论产品工程、内容系统和自动化交付。</p>
+      <div class="social-links">
+        {
+          profile.socialLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

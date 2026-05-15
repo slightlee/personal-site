@@ -4,6 +4,9 @@ const html = await readFile("dist/index.html", "utf8");
 const checks = [
   ["page language", 'lang="zh-CN"'],
   ["document title", "<title>personal-site</title>"],
+  ["profile name", "Ming Li"],
+  ["works section", "代表作品"],
+  ["work detail link", "/work/portfolio-system/"],
   ["contact link", "mailto:hello@example.com"],
 ];
 

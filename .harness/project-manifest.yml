@@ -8,9 +8,9 @@ profile: astro-static-site
 code_paths: src,scripts,vitest.config.mjs
 test_paths: tests
 
-task_id: "personal-site-t02"
+task_id: "personal-site-t03"
 milestone_id: "m1-personal-site"
-slice_id: "s2-content-model"
+slice_id: "s3-home-page"
 actor: agent
 risk_level: LOW
 

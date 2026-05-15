@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { readFile } from "node:fs/promises";
 import { contactHref, siteMetadata } from "../src/lib/site-metadata";
+import { workSlugFromId } from "../src/lib/work-slug";
 
 describe("project skeleton", () => {
   it("defines the expected package commands", async () => {
@@ -20,5 +21,10 @@ describe("project skeleton", () => {
     expect(siteMetadata.title).toBe("personal-site");
     expect(siteMetadata.description).toContain("Markdown");
     expect(contactHref()).toBe("mailto:hello@example.com");
+  });
+
+  it("normalizes content ids into route slugs", () => {
+    expect(workSlugFromId("portfolio-system.md")).toBe("portfolio-system");
+    expect(workSlugFromId("notes-pilot")).toBe("notes-pilot");
   });
 });
