@@ -6,6 +6,7 @@ const requiredFiles = [
   "vitest.config.mjs",
   "scripts/run-astro.mjs",
   "src/pages/index.astro",
+  "src/pages/work/[slug].astro",
   "src/layouts/BaseLayout.astro",
   "src/lib/site-metadata.ts",
   "src/data/profile.ts",

@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { workSlugFromId } from "../../lib/work-slug";
+
+export async function getStaticPaths() {
+  const works = await getCollection("works");
+
+  return works.map((work) => ({
+    params: { slug: workSlugFromId(work.id) },
+    props: { work },
+  }));
+}
+
+const { work } = Astro.props;
+const { Content } = await render(work);
+const title = `${work.data.title} | personal-site`;
+---
+
+<BaseLayout title={title} description={work.data.summary}>
+  <main class="page-shell detail-shell">
+    <nav class="breadcrumb" aria-label="返回导航">
+      <a href="/#works">返回作品列表</a>
+    </nav>
+
+    <article class="work-detail">
+      <header class="detail-header">
+        <p class="eyebrow">Case Study</p>
+        <h1>{work.data.title}</h1>
+        <p class="lead">{work.data.summary}</p>
+        <dl class="detail-meta">
+          <div>
+            <dt>Role</dt>
+            <dd>{work.data.role}</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>
+              <time datetime={work.data.date.toISOString()}>
+                {work.data.date.getFullYear()}
+              </time>
+            </dd>
+          </div>
+        </dl>
+        <ul class="tag-list">
+          {work.data.tags.map((tag) => <li>{tag}</li>)}
+        </ul>
+      </header>
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      <footer class="detail-links">
+        {work.data.externalUrl && <a href={work.data.externalUrl}>访问项目</a>}
+        {work.data.repoUrl && <a href={work.data.repoUrl}>查看仓库</a>}
+      </footer>
+    </article>
+  </main>
+</BaseLayout>

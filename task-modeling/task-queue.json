@@ -46,8 +46,11 @@
       "title": "实现作品详情页与 Markdown 渲染",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:27:52+08:00",
+      "completed_at": "2026-05-16T07:30:39+08:00",
+      "note": "manual_t04_pass"
     },
     {
       "task_id": "personal-site-t05",
