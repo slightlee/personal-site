@@ -1,0 +1,74 @@
+{
+  "tasks": [
+    {
+      "task_id": "personal-site-t01",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s1-project-skeleton",
+      "title": "搭建 Astro 项目骨架与 README",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "todo",
+      "attempts": 0
+    },
+    {
+      "task_id": "personal-site-t02",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s2-content-model",
+      "title": "建立个人资料与 Markdown 内容模型",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "todo",
+      "attempts": 0
+    },
+    {
+      "task_id": "personal-site-t03",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s3-home-page",
+      "title": "实现首页内容结构",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "todo",
+      "attempts": 0
+    },
+    {
+      "task_id": "personal-site-t04",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s4-work-detail",
+      "title": "实现作品详情页与 Markdown 渲染",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "todo",
+      "attempts": 0
+    },
+    {
+      "task_id": "personal-site-t05",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s5-ui-responsive",
+      "title": "实现 UI 视觉与响应式样式",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "todo",
+      "attempts": 0
+    },
+    {
+      "task_id": "personal-site-t06",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s6-seo-a11y-assets",
+      "title": "补齐 SEO、可访问性与静态资源",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "todo",
+      "attempts": 0
+    },
+    {
+      "task_id": "personal-site-t07",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s7-quality-delivery",
+      "title": "补齐 smoke、E2E、覆盖率与交付证据",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "todo",
+      "attempts": 0
+    }
+  ]
+}

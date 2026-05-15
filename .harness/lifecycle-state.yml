@@ -1,0 +1,61 @@
+# Harness lifecycle state
+# 复制到业务项目 `.harness/lifecycle-state.yml` 后，由人工或 Agent 在每个确认点更新。
+
+project:
+  name: "personal-site"
+  directory: "personal-site"
+  repository_url: "git@github.com:slightlee/personal-site.git"
+  repository_strategy: "ssh"
+  target_branch: "develop"
+  task_branch_prefix: "feature-"
+
+lifecycle:
+  current_state: "task_queue_created"
+  allowed_next_states:
+    - "planning_baseline_committed"
+
+confirmations:
+  project_goal:
+    status: "confirmed"
+    confirmed_by: "user"
+    confirmed_at: "2026-05-15"
+  prd:
+    status: "confirmed"
+    document: "docs/requirements/01-prd.md"
+    confirmed_by: "user"
+    confirmed_at: "2026-05-15"
+  technical_design:
+    status: "confirmed"
+    document: "docs/design/02-design.md"
+    confirmed_by: "user"
+    confirmed_at: "2026-05-15"
+  ui_design:
+    required: true
+    status: "confirmed"
+    document: "docs/design/03-ui-design.md"
+    confirmed_by: "user"
+    confirmed_at: "2026-05-15"
+    skip_reason: ""
+  task_breakdown:
+    status: "confirmed"
+    document: "docs/requirements/02-task-breakdown.md"
+    confirmed_by: "user"
+    confirmed_at: "2026-05-15"
+
+artifacts:
+  manifest: ".harness/project-manifest.yml"
+  constraints: ".harness/constraints.md"
+  task_queue: "task-modeling/task-queue.json"
+
+baseline:
+  planning_committed: false
+  commit_sha: ""
+  committed_by: ""
+  committed_at: ""
+
+execution:
+  business_code_allowed: false
+  dependency_install_allowed: false
+  task_queue_allowed: false
+  git_commit_allowed: false
+  git_push_allowed: false

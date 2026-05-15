@@ -1,0 +1,71 @@
+# Bootstrap manifest
+# 复制到业务项目 `.harness/project-manifest.yml`，先填写项目名、路径、远端策略和门禁命令。
+# Bootstrap 阶段不执行 task queue；确认链路完成后再生成 task-modeling/task-queue.json。
+
+language: unknown
+profile: bootstrap
+
+code_paths: src
+test_paths: tests
+
+task_id: "bootstrap"
+milestone_id: "bootstrap"
+slice_id: "project-governance"
+actor: agent
+risk_level: LOW
+
+task_queue_path: task-modeling/task-queue.json
+constraints_path: .harness/constraints.md
+lifecycle_state_path: .harness/lifecycle-state.yml
+task_queue_auto_approve_max_risk: LOW
+task_queue_continue_on_failure: false
+task_queue_auto_commit: true
+task_queue_auto_commit_on_failure: false
+task_queue_auto_commit_require_clean_start: true
+task_queue_auto_commit_branch_allowlist: "feature-*,task-*,feature/*,task/*"
+task_queue_one_task_per_run: true
+require_task_branch: true
+protected_branches: "main,master,develop,release/*"
+task_branch_prefix: "feature-"
+target_branch: "develop"
+require_pull_request: true
+
+approval_provider: manual
+scm_provider: "github"
+approval_context: "personal-site"
+release_approval_required: false
+review_source: ""
+required_approver_roles: "reviewer"
+approval_record_path: .harness/observability/approval-record.json
+
+review_report_path: docs/review/04-review.md
+stage_pr_path: docs/delivery/stage-pr.md
+pr_summary_path: docs/delivery/05-pr-summary.md
+compliance_report_path: docs/delivery/compliance-report.md
+rollback_plan_path: docs/delivery/rollback-plan.md
+release_evidence_path: docs/delivery/release-evidence.md
+
+enforce_audit_log_schema: true
+audit_log_jsonl_path: .harness/observability/agent-runs.jsonl
+audit_log_path: .harness/observability/agent-runs.log
+audit_log_schema_path: ../harness-enterprise-template/governance/audit-log.schema.json
+audit_summary_path: .harness/observability/audit-summary.md
+metrics_json_path: .harness/observability/metrics.json
+incident_log_path: .harness/observability/incident-log.md
+checkpoints_dir: .harness/observability/checkpoints
+progress_board_path: .harness/observability/progress.md
+progress_state_path: .harness/observability/progress-state.json
+
+coverage_threshold: 80
+strict_mode: true
+security_network_fail_open: false
+
+cmd_lint: ""
+cmd_typecheck: ""
+cmd_smoke: ""
+cmd_test: ""
+cmd_coverage: ""
+cmd_e2e: ""
+cmd_security: ""
+cmd_git_push: "git push -u origin $(git branch --show-current)"
+cmd_pr_open: "gh pr create --base develop --head $(git branch --show-current) --fill"
