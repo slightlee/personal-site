@@ -10,6 +10,10 @@ const writingDetailHtml = await readFile(
 const checks = [
   ["page language", 'lang="zh-CN"'],
   ["document title", "<title>李明的个人网站</title>"],
+  ["canonical link", 'rel="canonical"'],
+  ["manifest link", 'rel="manifest"'],
+  ["open graph type", 'property="og:type" content="website"'],
+  ["twitter card", 'name="twitter:card"'],
   ["profile name", "李明"],
   ["skip link", "跳到主要内容"],
   ["principles section", "工作方式"],
@@ -22,17 +26,24 @@ const checks = [
 
 const detailChecks = [
   ["detail title", "个人作品集内容系统"],
+  ["detail canonical", "https://slightlee.github.io/personal-site/work/portfolio-system/"],
+  ["detail article og type", 'property="og:type" content="article"'],
   ["detail body", "个人资料放在 TypeScript"],
   ["back link", "/#works"],
 ];
 
 const writingChecks = [
   ["writing index title", "文章与观点"],
+  ["writing canonical", "https://slightlee.github.io/personal-site/writing/"],
   ["writing index post", "个人网站为什么应该和博客结合"],
 ];
 
 const writingDetailChecks = [
   ["writing detail title", "个人网站为什么应该和博客结合"],
+  [
+    "writing detail canonical",
+    "https://slightlee.github.io/personal-site/writing/personal-site-as-content-hub/",
+  ],
   ["writing detail body", "个人网站负责第一印象"],
   ["writing back link", "/writing/"],
 ];

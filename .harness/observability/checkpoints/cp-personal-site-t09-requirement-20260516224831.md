@@ -1,0 +1,36 @@
+# Checkpoint: personal-site-t09 requirement passed
+
+- task_id: personal-site-t09
+- stage: requirement
+- status: passed
+- timestamp: 2026-05-16T22:48:31+08:00
+- risk_level: LOW
+- approval_status: auto_approved
+- approved_by: system:auto
+- 输入摘要:
+  - docs/requirements/requirement.md
+  - task-modeling/task-template.md
+- 输出摘要:
+  - docs/requirements/01-prd.md
+- 变更文件列表:
+  - total_detected: 20
+  - ignored_runtime_or_generated: 11
+  - recorded: 9
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+  - docs/delivery/stage-pr.md
+  - docs/review/04-review.md
+  - docs/testing/03-test-report.md
+  - scripts/e2e-personal-site.mjs
+  - scripts/smoke-dev-server.mjs
+  - task-modeling/task-queue.json
+  - docs/testing/quality-evidence.md
+- 门禁结果:
+  - gate: human_confirm
+  - status: auto_approved
+- 校验结果:
+  - quality-gates/validators/check-stage-order.sh: PASS (attempt_1)
+  - quality-gates/validators/check-policy.sh: PASS (attempt_1)
+- 风险证据: base:LOW
+- 恢复入口说明: 从该 checkpoint 恢复后，重新运行本阶段及其后续受影响门禁
+- note: stage_passed
