@@ -15,37 +15,69 @@ const works = (await getCollection("works"))
   <main class="page-shell" id="main-content">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Personal Site</p>
+        <p class="eyebrow">个人网站</p>
         <h1 id="hero-title">{profile.name}</h1>
         <p class="headline">{profile.headline}</p>
         <p class="lead">{profile.intro}</p>
         <div class="actions" aria-label="主要操作">
           <a class="button primary" href={contactHref(profile.email)}>联系我</a>
           <a class="button secondary" href="#works">查看作品</a>
+          <a class="button secondary" href="#notes">阅读观点</a>
         </div>
       </div>
       <aside class="hero-panel" aria-label="个人概要">
-        <p class="panel-label">Location</p>
-        <p>{profile.location}</p>
-        <p class="panel-label">Focus</p>
-        <p>{profile.skills.slice(0, 3).join(" / ")}</p>
+        <p class="panel-label">当前状态</p>
+        <p>{profile.availability}</p>
+        <div class="stats-grid">
+          {
+            profile.stats.map((item) => (
+              <div>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))
+          }
+        </div>
       </aside>
     </section>
 
     <section class="section" aria-labelledby="about-title">
       <div class="section-heading">
-        <p class="eyebrow">About</p>
+        <p class="eyebrow">关于我</p>
         <h2 id="about-title">把想法落成可靠的软件</h2>
       </div>
       <p>
-        我关注内容型产品、前端架构、自动化交付和测试策略。首版个人网站通过结构化数据和 Markdown
-        内容维护，让作品更新保持轻量、可审查、可持续。
+        我长期关注内容型产品、前端架构、自动化交付和测试策略。这个网站本身也是一个小型案例：
+        用 Astro 管理静态页面，用 Markdown 维护作品内容，用任务队列和质量门禁约束交付过程。
       </p>
+      <div class="highlight-strip" aria-label="个人定位摘要">
+        <span>{profile.location}</span>
+        <span>内容优先</span>
+        <span>工程可信</span>
+        <span>持续维护</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="principles-title">
+      <div class="section-heading">
+        <p class="eyebrow">工作方式</p>
+        <h2 id="principles-title">我如何推进一个项目</h2>
+      </div>
+      <div class="principle-grid">
+        {
+          profile.principles.map((item) => (
+            <article class="principle-card">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))
+        }
+      </div>
     </section>
 
     <section class="section" aria-labelledby="skills-title">
       <div class="section-heading">
-        <p class="eyebrow">Skills</p>
+        <p class="eyebrow">能力方向</p>
         <h2 id="skills-title">核心能力</h2>
       </div>
       <ul class="tag-list">
@@ -55,7 +87,7 @@ const works = (await getCollection("works"))
 
     <section class="section" id="works" aria-labelledby="works-title">
       <div class="section-heading">
-        <p class="eyebrow">Works</p>
+        <p class="eyebrow">代表作品</p>
         <h2 id="works-title">代表作品</h2>
       </div>
       <div class="works-grid">
@@ -78,9 +110,26 @@ const works = (await getCollection("works"))
       </div>
     </section>
 
-    <section class="section contact" aria-labelledby="contact-title">
+    <section class="section" id="notes" aria-labelledby="notes-title">
       <div class="section-heading">
-        <p class="eyebrow">Contact</p>
+        <p class="eyebrow">写作与观点</p>
+        <h2 id="notes-title">一些持续沉淀的问题</h2>
+      </div>
+      <div class="notes-list">
+        {
+          profile.notes.map((note) => (
+            <article>
+              <h3>{note.title}</h3>
+              <p>{note.summary}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <p class="eyebrow">联系</p>
         <h2 id="contact-title">保持联系</h2>
       </div>
       <p>欢迎通过邮件或公开链接联系我，讨论产品工程、内容系统和自动化交付。</p>

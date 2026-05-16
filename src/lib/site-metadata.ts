@@ -1,7 +1,7 @@
 export const siteMetadata = {
-  title: "personal-site",
+  title: "李明的个人网站",
   description:
-    "personal-site 项目骨架，后续将承载个人介绍、作品集与 Markdown 案例内容。",
+    "李明的个人网站，展示产品工程、前端架构、内容系统和自动化交付实践。",
   contactEmail: "hello@example.com",
 } as const;
 

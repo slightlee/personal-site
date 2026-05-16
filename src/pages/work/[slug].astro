@@ -26,16 +26,16 @@ const title = `${work.data.title} | personal-site`;
 
     <article class="work-detail">
       <header class="detail-header">
-        <p class="eyebrow">Case Study</p>
+        <p class="eyebrow">项目案例</p>
         <h1>{work.data.title}</h1>
         <p class="lead">{work.data.summary}</p>
         <dl class="detail-meta">
           <div>
-            <dt>Role</dt>
+            <dt>角色</dt>
             <dd>{work.data.role}</dd>
           </div>
           <div>
-            <dt>Date</dt>
+            <dt>时间</dt>
             <dd>
               <time datetime={work.data.date.toISOString()}>
                 {work.data.date.getFullYear()}

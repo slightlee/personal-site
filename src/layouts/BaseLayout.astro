@@ -21,9 +21,18 @@ const {
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>{title}</title>
   </head>
   <body>
+    <header class="site-header">
+      <a class="brand" href="/">李明</a>
+      <nav aria-label="主导航">
+        <a href="/#works">作品</a>
+        <a href="/#notes">观点</a>
+        <a href="/#contact">联系</a>
+      </nav>
+    </header>
     <slot />
   </body>
 </html>

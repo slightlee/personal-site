@@ -68,7 +68,20 @@
     {
       "task_id": "personal-site-t06",
       "milestone_id": "m1-personal-site",
-      "slice_id": "s6-seo-a11y-assets",
+      "slice_id": "s6-content-ui-zh-polish",
+      "title": "内容丰富化、视觉升级与中文统一",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:52:25+08:00",
+      "completed_at": "2026-05-16T08:03:14+08:00",
+      "note": "manual_t06_content_ui_zh_pass"
+    },
+    {
+      "task_id": "personal-site-t07",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s7-seo-a11y-assets",
       "title": "补齐 SEO、可访问性与静态资源",
       "actor": "agent",
       "risk_level": "LOW",
@@ -76,7 +89,7 @@
       "attempts": 0
     },
     {
-      "task_id": "personal-site-t07",
+      "task_id": "personal-site-t08",
       "milestone_id": "m1-personal-site",
       "slice_id": "s7-quality-delivery",
       "title": "补齐 smoke、E2E、覆盖率与交付证据",

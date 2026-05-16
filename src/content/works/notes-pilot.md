@@ -1,22 +1,22 @@
 ---
-title: "Notes Pilot"
-summary: "A content-first notes experience focused on clean writing, fast retrieval, and low maintenance overhead."
+title: "轻量笔记产品试验"
+summary: "一个以写作为中心的笔记体验，强调低维护成本、清晰结构和后续可扩展的内容组织。"
 date: "2026-04-28"
-role: "Full-stack Engineer"
-tags: ["Content", "Markdown", "UX"]
+role: "全栈工程"
+tags: ["内容系统", "Markdown", "体验设计"]
 externalUrl: ""
 repoUrl: ""
 featured: true
 ---
 
-## Background
+## 背景
 
-Personal knowledge tools often become too heavy before the writing habit is stable.
+很多个人知识工具在写作习惯稳定前就变得过重，功能越多，真正写下来的内容反而越少。
 
-## Approach
+## 方案
 
-The pilot favors plain files, predictable navigation, and a small information model that can evolve without a database.
+这个试验优先使用普通文件、稳定导航和小型信息模型，先保证内容能持续沉淀，再考虑搜索、标签和发布能力。
 
-## Result
+## 结果
 
-The first version keeps authoring friction low while leaving room for search, tags, and publishing later.
+首版把写作阻力控制在很低水平，同时为后续搜索、标签和公开发布保留清晰演进路径。

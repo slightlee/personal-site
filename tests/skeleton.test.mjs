@@ -18,8 +18,8 @@ describe("project skeleton", () => {
   });
 
   it("defines stable site metadata for the skeleton page", () => {
-    expect(siteMetadata.title).toBe("personal-site");
-    expect(siteMetadata.description).toContain("Markdown");
+    expect(siteMetadata.title).toBe("李明的个人网站");
+    expect(siteMetadata.description).toContain("自动化交付");
     expect(contactHref()).toBe("mailto:hello@example.com");
   });
 

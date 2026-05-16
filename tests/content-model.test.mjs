@@ -30,6 +30,9 @@ describe("content model", () => {
     expect(profile.intro).toBeTruthy();
     expect(profile.email).toContain("@");
     expect(profile.skills.length).toBeGreaterThanOrEqual(3);
+    expect(profile.principles.length).toBeGreaterThanOrEqual(3);
+    expect(profile.notes.length).toBeGreaterThanOrEqual(3);
+    expect(profile.stats.length).toBeGreaterThanOrEqual(3);
     expect(profile.socialLinks.length).toBeGreaterThanOrEqual(1);
   });
 
