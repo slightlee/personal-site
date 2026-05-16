@@ -14,4 +14,15 @@ const works = defineCollection({
   }),
 });
 
-export const collections = { works };
+const writing = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string().min(1),
+    description: z.string().min(1),
+    date: z.coerce.date(),
+    tags: z.array(z.string().min(1)).min(1),
+    featured: z.boolean().default(false),
+  }),
+});
+
+export const collections = { works, writing };

@@ -1,0 +1,52 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { writingSlugFromId } from "../../lib/writing-slug";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("writing");
+
+  return posts.map((post) => ({
+    params: { slug: writingSlugFromId(post.id) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={`${post.data.title} | 李明的个人网站`} description={post.data.description}>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <main class="page-shell detail-shell" id="main-content">
+    <nav class="breadcrumb" aria-label="返回导航">
+      <a href="/writing/">返回文章列表</a>
+    </nav>
+
+    <article class="work-detail">
+      <header class="detail-header">
+        <p class="eyebrow">文章</p>
+        <h1>{post.data.title}</h1>
+        <p class="lead">{post.data.description}</p>
+        <dl class="detail-meta">
+          <div>
+            <dt>时间</dt>
+            <dd>
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString("zh-CN")}
+              </time>
+            </dd>
+          </div>
+          <div>
+            <dt>标签</dt>
+            <dd>{post.data.tags.join(" / ")}</dd>
+          </div>
+        </dl>
+      </header>
+
+      <div class="prose">
+        <Content />
+      </div>
+    </article>
+  </main>
+</BaseLayout>

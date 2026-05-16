@@ -81,7 +81,20 @@
     {
       "task_id": "personal-site-t07",
       "milestone_id": "m1-personal-site",
-      "slice_id": "s7-seo-a11y-assets",
+      "slice_id": "s7-writing-blog",
+      "title": "建立中文写作 / 博客模块",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T09:11:59+08:00",
+      "completed_at": "2026-05-16T09:19:41+08:00",
+      "note": "manual_t07_writing_pass"
+    },
+    {
+      "task_id": "personal-site-t08",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s8-seo-a11y-assets",
       "title": "补齐 SEO、可访问性与静态资源",
       "actor": "agent",
       "risk_level": "LOW",
@@ -89,9 +102,9 @@
       "attempts": 0
     },
     {
-      "task_id": "personal-site-t08",
+      "task_id": "personal-site-t09",
       "milestone_id": "m1-personal-site",
-      "slice_id": "s7-quality-delivery",
+      "slice_id": "s9-quality-delivery",
       "title": "补齐 smoke、E2E、覆盖率与交付证据",
       "actor": "agent",
       "risk_level": "LOW",

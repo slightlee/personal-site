@@ -29,8 +29,9 @@
 | 4 | personal-site-t04 | 实现作品详情页与 Markdown 渲染 | 增加作品详情路由、Markdown 正文渲染和返回导航 | 作品详情可访问，正文阅读体验稳定 | LOW |
 | 5 | personal-site-t05 | 实现 UI 视觉与响应式样式 | 按 UI 设计实现全局样式、卡片、排版、响应式和 focus 状态 | 移动端/桌面端不重叠，视觉符合 UI 设计 | LOW |
 | 6 | personal-site-t06 | 内容丰富化、视觉升级与中文统一 | 基于个人网站调研补齐信息密度、统一中文文案、升级整体视觉系统 | 首页内容更完整；可见文案以中文为主；视觉风格统一 | LOW |
-| 7 | personal-site-t07 | 补齐 SEO、可访问性与静态资源 | 增加 metadata、Open Graph、favicon、语义化结构和 alt 规则 | SEO 信息存在，基础 a11y 检查通过 | LOW |
-| 8 | personal-site-t08 | 补齐 smoke、E2E、覆盖率与交付证据 | 增加 smoke/e2e 脚本、测试报告、交付文档，验证 PR/MR 阶段 | 全门禁通过；有 remote/gh 时创建 PR | LOW |
+| 7 | personal-site-t07 | 建立中文写作 / 博客模块 | 增加 writing collection、文章列表页、文章详情页和首页精选文章入口 | 至少 3 篇中文文章；首页、列表页、详情页可访问；测试覆盖 frontmatter | LOW |
+| 8 | personal-site-t08 | 补齐 SEO、可访问性与静态资源 | 增加 metadata、Open Graph、favicon、语义化结构和 alt 规则 | SEO 信息存在，基础 a11y 检查通过 | LOW |
+| 9 | personal-site-t09 | 补齐 smoke、E2E、覆盖率与交付证据 | 增加 smoke/e2e 脚本、测试报告、交付文档，验证 PR/MR 阶段 | 全门禁通过；有 remote/gh 时创建 PR | LOW |
 
 ## T01: 搭建 Astro 项目骨架与 README
 
@@ -152,7 +153,31 @@
 - UI 风格统一，不出现明显割裂的中英文、色彩或卡片层级。
 - `lint`、`typecheck`、`test`、`coverage`、`smoke`、`e2e` 通过。
 
-## T07: 补齐 SEO、可访问性与静态资源
+## T07: 建立中文写作 / 博客模块
+
+### 目标
+
+把博客作为个人网站的一等模块，形成“个人品牌首页 + 中文写作内容中枢”的首版结构。
+
+### 业务/技术增量
+
+- 新增 `src/content/writing/*.md`，至少 3 篇中文文章。
+- 在 content config 中增加 writing collection 和 frontmatter schema。
+- 新增 `/writing` 文章列表页。
+- 新增 `/writing/[slug]` 文章详情页。
+- 首页展示精选文章入口。
+- 导航从“观点”调整为“写作”，并链接到 `/writing`。
+- 增加测试覆盖文章数量、frontmatter、首页入口、列表页和详情页生成。
+
+### 验收重点
+
+- 首页有精选文章入口。
+- `/writing` 能看到全部文章列表。
+- `/writing/[slug]` 能渲染 Markdown 正文。
+- 可见文案以中文为主。
+- `lint`、`typecheck`、`test`、`coverage`、`smoke`、`e2e` 通过。
+
+## T08: 补齐 SEO、可访问性与静态资源
 
 ### 目标
 
@@ -172,7 +197,7 @@
 - 链接文本清晰。
 - 图片有 alt 或明确装饰属性。
 
-## T08: 补齐 smoke、E2E、覆盖率与交付证据
+## T09: 补齐 smoke、E2E、覆盖率与交付证据
 
 ### 目标
 

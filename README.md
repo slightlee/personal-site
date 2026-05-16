@@ -28,7 +28,9 @@ pnpm run e2e
 - 个人资料维护在 `src/data/profile.ts`。
 - 站点基础元数据维护在 `src/lib/site-metadata.ts`。
 - 作品内容维护在 `src/content/works/*.md`。
+- 写作文章维护在 `src/content/writing/*.md`。
 - 作品详情页由 `src/pages/work/[slug].astro` 从 Markdown 生成。
+- 文章列表页和详情页由 `src/pages/writing/` 从 Markdown 生成。
 - 全局样式维护在 `src/styles/global.css`。
 - 静态资源维护在 `public/`。
 - UI 样式契约由 `tests/ui-styles.test.mjs` 保护，重点覆盖响应式、focus 和圆角限制。

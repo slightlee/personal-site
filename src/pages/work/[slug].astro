@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
 const { work } = Astro.props;
 const { Content } = await render(work);
-const title = `${work.data.title} | personal-site`;
+const title = `${work.data.title} | 李明的个人网站`;
 ---
 
 <BaseLayout title={title} description={work.data.summary}>

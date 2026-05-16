@@ -11,6 +11,11 @@ const requiredFiles = [
   "src/lib/site-metadata.ts",
   "src/data/profile.ts",
   "src/content/config.ts",
+  "src/content/writing/personal-site-as-content-hub.md",
+  "src/content/writing/agent-workflow-boundary.md",
+  "src/content/writing/content-first-portfolio.md",
+  "src/pages/writing/index.astro",
+  "src/pages/writing/[slug].astro",
   "src/styles/global.css",
   "public/favicon.svg",
 ];
