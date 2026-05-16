@@ -1,0 +1,46 @@
+# Checkpoint: personal-site-t08 pr passed
+
+- task_id: personal-site-t08
+- stage: pr
+- status: passed
+- timestamp: 2026-05-16T21:37:42+08:00
+- risk_level: LOW
+- approval_status: skipped_not_required
+- 输入摘要:
+  - docs/review/04-review.md
+- 输出摘要:
+  - docs/delivery/stage-pr.md
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+- 变更文件列表:
+  - total_detected: 30
+  - ignored_runtime_or_generated: 13
+  - recorded: 17
+  - .gitignore
+  - scripts/lint.mjs
+  - src/layouts/BaseLayout.astro
+  - src/lib/site-metadata.ts
+  - src/pages/work/[slug].astro
+  - src/pages/writing/[slug].astro
+  - src/pages/writing/index.astro
+  - task-modeling/task-queue.json
+  - tests/skeleton.test.mjs
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+  - docs/delivery/stage-pr.md
+  - docs/review/04-review.md
+  - docs/testing/03-test-report.md
+  - public/og-image.svg
+  - public/site.webmanifest
+  - tests/seo-a11y.test.mjs
+- 门禁结果:
+  - gate: release_approval
+  - status: skipped_not_required
+- 校验结果:
+  - quality-gates/validators/check-stage-order.sh: PASS (attempt_1)
+  - quality-gates/validators/check-policy.sh: PASS (attempt_1)
+  - quality-gates/validators/check-release-readiness.sh: PASS (attempt_1)
+  - quality-gates/validators/check-delivery-artifacts.sh: PASS (attempt_1)
+- 风险证据: base:LOW
+- 恢复入口说明: 从该 checkpoint 恢复后，重新运行本阶段及其后续受影响门禁
+- note: stage_passed

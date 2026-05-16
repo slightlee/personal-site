@@ -1,0 +1,37 @@
+# Checkpoint: personal-site-t08 review failed
+
+- task_id: personal-site-t08
+- stage: review
+- status: failed
+- timestamp: 2026-05-16T21:35:16+08:00
+- risk_level: LOW
+- approval_status: not_required
+- 输入摘要:
+  - docs/testing/03-test-report.md
+  - observability/agent-runs.jsonl
+- 输出摘要:
+  - docs/review/04-review.md
+- 变更文件列表:
+  - total_detected: 19
+  - ignored_runtime_or_generated: 7
+  - recorded: 12
+  - .gitignore
+  - scripts/lint.mjs
+  - src/layouts/BaseLayout.astro
+  - src/lib/site-metadata.ts
+  - src/pages/work/[slug].astro
+  - src/pages/writing/[slug].astro
+  - src/pages/writing/index.astro
+  - task-modeling/task-queue.json
+  - tests/skeleton.test.mjs
+  - public/og-image.svg
+  - public/site.webmanifest
+  - tests/seo-a11y.test.mjs
+- 门禁结果:
+  - gate: none
+  - status: not_required
+- 校验结果:
+  - quality-gates/validators/check-stage-order.sh: FAIL (failed_after_3_attempts)
+- 风险证据: base:LOW
+- 恢复入口说明: 从该 checkpoint 恢复后，重新运行本阶段及其后续受影响门禁
+- note: validator_failed

@@ -1,0 +1,50 @@
+[
+  {
+    "timestamp": "2026-05-16T21:33:54+08:00",
+    "run_id": "run-20260516213350-90875",
+    "task_id": "personal-site-t08",
+    "stage": "requirement",
+    "gate": "human_confirm",
+    "provider": "ci_asserted",
+    "status": "auto_approved",
+    "risk_level": "LOW",
+    "approved_by": [
+      "system:auto"
+    ],
+    "approval_context": "personal-site",
+    "change_request_id": "",
+    "review_source": ""
+  },
+  {
+    "timestamp": "2026-05-16T21:33:57+08:00",
+    "run_id": "run-20260516213350-90875",
+    "task_id": "personal-site-t08",
+    "stage": "design",
+    "gate": "human_confirm",
+    "provider": "ci_asserted",
+    "status": "auto_approved",
+    "risk_level": "LOW",
+    "approved_by": [
+      "system:auto"
+    ],
+    "approval_context": "personal-site",
+    "change_request_id": "",
+    "review_source": ""
+  },
+  {
+    "timestamp": "2026-05-16T21:37:23+08:00",
+    "run_id": "run-20260516213717-5351",
+    "task_id": "personal-site-t08",
+    "stage": "review",
+    "gate": "risk_based_approval",
+    "provider": "ci_asserted",
+    "status": "auto_approved",
+    "risk_level": "LOW",
+    "approved_by": [
+      "system:auto"
+    ],
+    "approval_context": "personal-site",
+    "change_request_id": "",
+    "review_source": ""
+  }
+]

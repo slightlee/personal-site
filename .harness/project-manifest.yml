@@ -1,16 +1,20 @@
 # Bootstrap manifest
 # 复制到业务项目 `.harness/project-manifest.yml`，先填写项目名、路径、远端策略和门禁命令。
 # Bootstrap 阶段不执行 task queue；确认链路完成后再生成 task-modeling/task-queue.json。
+# 当用户要求按 task queue / harness 流程继续时，本文件是项目任务执行的流程控制源。
+# task_queue_auto_commit / require_task_branch / require_pull_request / cmd_git_push / cmd_pr_open
+# 构成对 harness 交付流程的用户授权；通用 Agent 工作习惯不得覆盖这些授权。
+# git commit / push / PR 创建执行前仍需提示风险并获得明确确认；clean start 不满足时必须停止。
 
-language: unknown
-profile: bootstrap
+language: node
+profile: astro-static-site
 
-code_paths: src
+code_paths: src,scripts,vitest.config.mjs
 test_paths: tests
 
-task_id: "bootstrap"
-milestone_id: "bootstrap"
-slice_id: "project-governance"
+task_id: "personal-site-t08"
+milestone_id: "m1-personal-site"
+slice_id: "s8-seo-a11y-assets"
 actor: agent
 risk_level: LOW
 
@@ -24,11 +28,20 @@ task_queue_auto_commit_on_failure: false
 task_queue_auto_commit_require_clean_start: true
 task_queue_auto_commit_branch_allowlist: "feature-*,task-*,feature/*,task/*"
 task_queue_one_task_per_run: true
+task_queue_allow_manual_done: true
+task_queue_require_execute_hook: false
+task_queue_require_commit_on_done: true
 require_task_branch: true
 protected_branches: "main,master,develop,release/*"
 task_branch_prefix: "feature-"
 target_branch: "develop"
 require_pull_request: true
+require_pr_url: true
+pr_evidence_path: .harness/observability/pr-evidence.json
+workflow_result_path: .harness/observability/last-workflow-result.json
+require_task_evidence: true
+task_evidence_paths: "src,tests,docs,public,scripts,package.json,pnpm-lock.yaml,package-lock.json,yarn.lock"
+task_evidence_exclude_paths: "task-modeling,observability,.harness/observability,node_modules,dist,coverage,.playwright-mcp,.DS_Store"
 
 approval_provider: manual
 scm_provider: "github"
@@ -60,12 +73,13 @@ coverage_threshold: 80
 strict_mode: true
 security_network_fail_open: false
 
-cmd_lint: ""
-cmd_typecheck: ""
-cmd_smoke: ""
-cmd_test: ""
-cmd_coverage: ""
-cmd_e2e: ""
+cmd_lint: "pnpm run lint"
+cmd_typecheck: "pnpm run typecheck"
+cmd_smoke: "pnpm run smoke"
+cmd_test: "pnpm run test"
+cmd_coverage: "pnpm run coverage"
+cmd_e2e: "pnpm run e2e"
 cmd_security: ""
+cmd_task_execute: ""
 cmd_git_push: "git push -u origin $(git branch --show-current)"
 cmd_pr_open: "gh pr create --base develop --head $(git branch --show-current) --fill"

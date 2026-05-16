@@ -7,8 +7,11 @@
       "title": "搭建 Astro 项目骨架与 README",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-15T23:30:36+08:00",
+      "completed_at": "2026-05-15T23:37:55+08:00",
+      "note": "manual_t01_pass"
     },
     {
       "task_id": "personal-site-t02",
@@ -17,8 +20,11 @@
       "title": "建立个人资料与 Markdown 内容模型",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:15:54+08:00",
+      "completed_at": "2026-05-16T07:20:54+08:00",
+      "note": "manual_t02_pass"
     },
     {
       "task_id": "personal-site-t03",
@@ -27,8 +33,11 @@
       "title": "实现首页内容结构",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:22:02+08:00",
+      "completed_at": "2026-05-16T07:26:41+08:00",
+      "note": "manual_t03_pass"
     },
     {
       "task_id": "personal-site-t04",
@@ -37,8 +46,11 @@
       "title": "实现作品详情页与 Markdown 渲染",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:27:52+08:00",
+      "completed_at": "2026-05-16T07:30:39+08:00",
+      "note": "manual_t04_pass"
     },
     {
       "task_id": "personal-site-t05",
@@ -47,24 +59,66 @@
       "title": "实现 UI 视觉与响应式样式",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:31:46+08:00",
+      "completed_at": "2026-05-16T07:34:01+08:00",
+      "note": "manual_t05_pass"
     },
     {
       "task_id": "personal-site-t06",
       "milestone_id": "m1-personal-site",
-      "slice_id": "s6-seo-a11y-assets",
+      "slice_id": "s6-content-ui-zh-polish",
+      "title": "内容丰富化、视觉升级与中文统一",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T07:52:25+08:00",
+      "completed_at": "2026-05-16T08:03:14+08:00",
+      "note": "manual_t06_content_ui_zh_pass"
+    },
+    {
+      "task_id": "personal-site-t07",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s7-writing-blog",
+      "title": "建立中文写作 / 博客模块",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T09:11:59+08:00",
+      "completed_at": "2026-05-16T09:19:41+08:00",
+      "note": "manual_t07_writing_pass"
+    },
+    {
+      "task_id": "personal-site-t08",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s8-seo-a11y-assets",
       "title": "补齐 SEO、可访问性与静态资源",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-16T21:27:30+08:00",
+      "completed_at": "2026-05-16T21:38:23+08:00",
+      "note": "workflow_pass"
+    },
+    {
+      "task_id": "personal-site-t09",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s9-quality-delivery",
+      "title": "补齐 smoke、E2E、覆盖率与交付证据",
       "actor": "agent",
       "risk_level": "LOW",
       "status": "todo",
       "attempts": 0
     },
     {
-      "task_id": "personal-site-t07",
+      "task_id": "personal-site-t10",
       "milestone_id": "m1-personal-site",
-      "slice_id": "s7-quality-delivery",
-      "title": "补齐 smoke、E2E、覆盖率与交付证据",
+      "slice_id": "s10-visual-refresh",
+      "title": "个人网站视觉精致化改版",
       "actor": "agent",
       "risk_level": "LOW",
       "status": "todo",
