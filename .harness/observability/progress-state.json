@@ -1,0 +1,47 @@
+{
+  "project_name": "personal-site",
+  "task_id": "personal-site-t08",
+  "milestone_id": "m1-personal-site",
+  "slice_id": "s8-seo-a11y-assets",
+  "updated_at": "2026-05-16T21:37:43+08:00",
+  "blockers": [],
+  "next_action": "领取下一个任务并启动 requirement 阶段",
+  "stages": {
+    "requirement": {
+      "status": "pending",
+      "owner": "Planner",
+      "updated_at": "-",
+      "note": "-"
+    },
+    "design": {
+      "status": "pending",
+      "owner": "Architect",
+      "updated_at": "-",
+      "note": "-"
+    },
+    "code": {
+      "status": "pending",
+      "owner": "Implementer",
+      "updated_at": "-",
+      "note": "-"
+    },
+    "test": {
+      "status": "pending",
+      "owner": "Tester",
+      "updated_at": "-",
+      "note": "-"
+    },
+    "review": {
+      "status": "passed",
+      "owner": "Reviewer",
+      "updated_at": "2026-05-16T21:37:24+08:00",
+      "note": "stage_passed"
+    },
+    "pr": {
+      "status": "passed",
+      "owner": "Release Manager",
+      "updated_at": "2026-05-16T21:37:42+08:00",
+      "note": "stage_passed"
+    }
+  }
+}

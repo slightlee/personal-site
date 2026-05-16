@@ -1,0 +1,38 @@
+# Checkpoint: personal-site-t08 design passed
+
+- task_id: personal-site-t08
+- stage: design
+- status: passed
+- timestamp: 2026-05-16T21:33:57+08:00
+- risk_level: LOW
+- approval_status: auto_approved
+- approved_by: system:auto
+- 输入摘要:
+  - docs/requirements/01-prd.md
+- 输出摘要:
+  - docs/design/02-design.md
+- 变更文件列表:
+  - total_detected: 12
+  - ignored_runtime_or_generated: 0
+  - recorded: 12
+  - .gitignore
+  - scripts/lint.mjs
+  - src/layouts/BaseLayout.astro
+  - src/lib/site-metadata.ts
+  - src/pages/work/[slug].astro
+  - src/pages/writing/[slug].astro
+  - src/pages/writing/index.astro
+  - task-modeling/task-queue.json
+  - tests/skeleton.test.mjs
+  - public/og-image.svg
+  - public/site.webmanifest
+  - tests/seo-a11y.test.mjs
+- 门禁结果:
+  - gate: human_confirm
+  - status: auto_approved
+- 校验结果:
+  - quality-gates/validators/check-stage-order.sh: PASS (attempt_1)
+  - quality-gates/validators/check-policy.sh: PASS (attempt_1)
+- 风险证据: base:LOW
+- 恢复入口说明: 从该 checkpoint 恢复后，重新运行本阶段及其后续受影响门禁
+- note: stage_passed

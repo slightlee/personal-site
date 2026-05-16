@@ -98,9 +98,11 @@
       "title": "补齐 SEO、可访问性与静态资源",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "in_progress",
+      "status": "done",
       "attempts": 1,
-      "started_at": "2026-05-16T21:27:30+08:00"
+      "started_at": "2026-05-16T21:27:30+08:00",
+      "completed_at": "2026-05-16T21:38:23+08:00",
+      "note": "workflow_pass"
     },
     {
       "task_id": "personal-site-t09",

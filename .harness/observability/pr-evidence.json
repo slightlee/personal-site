@@ -1,0 +1,10 @@
+{
+  "task_id": "personal-site-t08",
+  "run_id": "run-20260516213717-5351",
+  "source_branch": "feature-personal-site-t08-seo-a11y-assets",
+  "target_branch": "develop",
+  "url": "https://github.com/slightlee/personal-site/pull/1",
+  "command": "gh pr create --base develop --head $(git branch --show-current) --fill",
+  "output": "https://github.com/slightlee/personal-site/pull/1",
+  "created_at": "2026-05-16T21:37:42+08:00"
+}

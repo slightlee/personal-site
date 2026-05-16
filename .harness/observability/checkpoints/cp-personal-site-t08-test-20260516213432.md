@@ -1,0 +1,40 @@
+# Checkpoint: personal-site-t08 test passed
+
+- task_id: personal-site-t08
+- stage: test
+- status: passed
+- timestamp: 2026-05-16T21:34:32+08:00
+- risk_level: LOW
+- approval_status: not_required
+- 输入摘要:
+  - <code_paths_from_manifest>  # 由 validator 自动从 harness/project-manifest.yml 读取
+  - docs/requirements/01-prd.md
+- 输出摘要:
+  - <test_paths_from_manifest>  # 由 validator 自动从 harness/project-manifest.yml 读取
+  - docs/testing/03-test-report.md
+- 变更文件列表:
+  - total_detected: 19
+  - ignored_runtime_or_generated: 7
+  - recorded: 12
+  - .gitignore
+  - scripts/lint.mjs
+  - src/layouts/BaseLayout.astro
+  - src/lib/site-metadata.ts
+  - src/pages/work/[slug].astro
+  - src/pages/writing/[slug].astro
+  - src/pages/writing/index.astro
+  - task-modeling/task-queue.json
+  - tests/skeleton.test.mjs
+  - public/og-image.svg
+  - public/site.webmanifest
+  - tests/seo-a11y.test.mjs
+- 门禁结果:
+  - gate: none
+  - status: not_required
+- 校验结果:
+  - quality-gates/validators/check-stage-order.sh: PASS (attempt_1)
+  - quality-gates/validators/check-policy.sh: PASS (attempt_1)
+  - quality-gates/validators/check-tests.sh: PASS (attempt_1)
+- 风险证据: base:LOW
+- 恢复入口说明: 从该 checkpoint 恢复后，重新运行本阶段及其后续受影响门禁
+- note: stage_passed
