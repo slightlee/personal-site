@@ -8,7 +8,11 @@ const posts = (await getCollection("writing")).sort(
 );
 ---
 
-<BaseLayout title="写作 | 李明的个人网站" description="关于个人网站、内容系统、工程流程和自动化交付的中文文章。">
+<BaseLayout
+  title="写作 | 李明的个人网站"
+  description="关于个人网站、内容系统、工程流程和自动化交付的中文文章。"
+  canonicalPath="/writing/"
+>
   <a class="skip-link" href="#main-content">跳到主要内容</a>
   <main class="page-shell detail-shell" id="main-content">
     <section class="detail-header" aria-labelledby="writing-title">

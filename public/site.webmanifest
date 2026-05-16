@@ -1,0 +1,19 @@
+{
+  "name": "李明的个人网站",
+  "short_name": "李明",
+  "description": "展示产品工程、前端架构、内容系统和自动化交付实践的个人网站。",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f7f2",
+  "theme_color": "#1d655f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

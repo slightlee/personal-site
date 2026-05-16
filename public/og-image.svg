@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">李明的个人网站分享封面</title>
+  <desc id="description">深青绿色标题、琥珀色强调线和纸感背景组成的分享图。</desc>
+  <rect width="1200" height="630" fill="#f8f7f2"/>
+  <rect x="72" y="72" width="1056" height="486" rx="8" fill="#fffdf8" stroke="#ded8cb" stroke-width="3"/>
+  <path d="M72 166H1128" stroke="#1d655f" stroke-width="10"/>
+  <path d="M112 410H440" stroke="#d9862c" stroke-width="12"/>
+  <text x="112" y="280" fill="#1d252c" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="84" font-weight="800">李明的个人网站</text>
+  <text x="112" y="360" fill="#5f6872" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="600">产品工程 · 内容系统 · 自动化交付</text>
+  <text x="112" y="488" fill="#1d655f" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="700">slightlee.github.io/personal-site</text>
+</svg>

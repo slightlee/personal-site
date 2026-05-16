@@ -18,6 +18,8 @@ const requiredFiles = [
   "src/pages/writing/[slug].astro",
   "src/styles/global.css",
   "public/favicon.svg",
+  "public/og-image.svg",
+  "public/site.webmanifest",
 ];
 
 const errors = [];

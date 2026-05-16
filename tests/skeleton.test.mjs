@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { readFile } from "node:fs/promises";
-import { contactHref, siteMetadata } from "../src/lib/site-metadata";
+import { absoluteSiteUrl, contactHref, siteMetadata } from "../src/lib/site-metadata";
 import { contentSlugFromId } from "../src/lib/content-slug";
 import { workSlugFromId } from "../src/lib/work-slug";
 import { writingSlugFromId } from "../src/lib/writing-slug";
@@ -22,7 +22,11 @@ describe("project skeleton", () => {
   it("defines stable site metadata for the skeleton page", () => {
     expect(siteMetadata.title).toBe("李明的个人网站");
     expect(siteMetadata.description).toContain("自动化交付");
+    expect(siteMetadata.siteUrl).toBe("https://slightlee.github.io/personal-site");
     expect(contactHref()).toBe("mailto:hello@example.com");
+    expect(absoluteSiteUrl("/writing/")).toBe(
+      "https://slightlee.github.io/personal-site/writing/",
+    );
   });
 
   it("normalizes content ids into route slugs", () => {

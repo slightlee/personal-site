@@ -17,7 +17,12 @@ const { Content } = await render(work);
 const title = `${work.data.title} | 李明的个人网站`;
 ---
 
-<BaseLayout title={title} description={work.data.summary}>
+<BaseLayout
+  title={title}
+  description={work.data.summary}
+  canonicalPath={`/work/${workSlugFromId(work.id)}/`}
+  ogType="article"
+>
   <a class="skip-link" href="#main-content">跳到主要内容</a>
   <main class="page-shell detail-shell" id="main-content">
     <nav class="breadcrumb" aria-label="返回导航">
@@ -53,8 +58,20 @@ const title = `${work.data.title} | 李明的个人网站`;
       </div>
 
       <footer class="detail-links">
-        {work.data.externalUrl && <a href={work.data.externalUrl}>访问项目</a>}
-        {work.data.repoUrl && <a href={work.data.repoUrl}>查看仓库</a>}
+        {
+          work.data.externalUrl && (
+            <a href={work.data.externalUrl} aria-label={`访问项目：${work.data.title}`}>
+              访问项目
+            </a>
+          )
+        }
+        {
+          work.data.repoUrl && (
+            <a href={work.data.repoUrl} aria-label={`查看仓库：${work.data.title}`}>
+              查看仓库
+            </a>
+          )
+        }
       </footer>
     </article>
   </main>

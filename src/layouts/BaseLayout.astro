@@ -1,16 +1,22 @@
 ---
 import "../styles/global.css";
-import { siteMetadata } from "../lib/site-metadata";
+import { absoluteSiteUrl, siteMetadata } from "../lib/site-metadata";
 
 interface Props {
   title?: string;
   description?: string;
+  canonicalPath?: string;
+  ogType?: "website" | "article";
 }
 
 const {
   title = siteMetadata.title,
   description = siteMetadata.description,
+  canonicalPath = Astro.url.pathname,
+  ogType = "website",
 } = Astro.props;
+const canonicalUrl = absoluteSiteUrl(canonicalPath);
+const ogImageUrl = absoluteSiteUrl(siteMetadata.ogImage);
 ---
 
 <!doctype html>
@@ -18,10 +24,24 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#1d655f" />
     <meta name="description" content={description} />
+    <meta name="author" content="李明" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content={siteMetadata.locale} />
+    <meta property="og:site_name" content={siteMetadata.title} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={siteMetadata.ogImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <title>{title}</title>
   </head>
   <body>
