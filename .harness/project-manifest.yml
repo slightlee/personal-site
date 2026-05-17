@@ -12,9 +12,9 @@ profile: astro-static-site
 code_paths: src,scripts,vitest.config.mjs
 test_paths: tests
 
-task_id: "personal-site-t10"
+task_id: "personal-site-t11"
 milestone_id: "m1-personal-site"
-slice_id: "s10-visual-refresh"
+slice_id: "s11-header-nav-ui"
 actor: agent
 risk_level: LOW
 

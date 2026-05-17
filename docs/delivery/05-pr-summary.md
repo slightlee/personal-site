@@ -1,22 +1,22 @@
-# T10 PR 摘要
+# T11 PR 摘要
 
 ## 基本信息
 
-- task_id: personal-site-t10
+- task_id: personal-site-t11
 - 风险等级: LOW
 - 目标分支: develop
 
 ## 验证摘要
 
-- 验证项: 代码、测试、安全、构建、smoke、E2E、浏览器响应式检查
+- 验证项: 代码、测试、覆盖率、构建、smoke、E2E、头部导航样式契约
 - 验证结果: PASS
 - 关键证据: `docs/testing/03-test-report.md`、`docs/delivery/release-evidence.md`
-- PR 证据: https://github.com/slightlee/personal-site/pull/3
+- PR 证据: 待本次 t11 新 PR 创建后回填
 
 ## 风险与回滚
 
-- 风险说明: 视觉刷新变更集中在 Astro 模板和 CSS，主要风险是布局细节和移动端表现。
-- rollback: 按 `docs/delivery/rollback-plan.md` 回滚 t10 任务提交，并重新运行 build、smoke、e2e 和浏览器检查。
+- 风险说明: 头部导航样式变更集中在 CSS，主要风险是视觉偏好和移动端间距。
+- rollback: 按 `docs/delivery/rollback-plan.md` 回滚 t11 任务提交，并重新运行 lint、typecheck、test、coverage、build、smoke 和 e2e。
 
 ## 审批摘要
 

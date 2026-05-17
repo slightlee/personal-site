@@ -1,0 +1,52 @@
+# Checkpoint: personal-site-t11 header nav ui passed
+
+- task_id: personal-site-t11
+- stage: pr
+- status: passed
+- timestamp: 2026-05-17T16:24:19+08:00
+- risk_level: LOW
+- approval_status: skipped_not_required
+- 输入摘要:
+  - 用户新增需求: 优化网站头部导航 UI 样式，当前样式色差差异明显
+  - src/styles/global.css
+  - tests/ui-styles.test.mjs
+- 输出摘要:
+  - docs/testing/03-test-report.md
+  - docs/review/04-review.md
+  - docs/delivery/stage-pr.md
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+  - docs/delivery/rollback-plan.md
+  - docs/delivery/release-evidence.md
+- 变更文件列表:
+  - .harness/project-manifest.yml
+  - .harness/task-modeling/task-queue.json
+  - docs/requirements/02-task-breakdown.md
+  - src/styles/global.css
+  - tests/ui-styles.test.mjs
+  - docs/testing/03-test-report.md
+  - docs/testing/quality-evidence.md
+  - docs/review/04-review.md
+  - docs/delivery/stage-pr.md
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+  - docs/delivery/rollback-plan.md
+  - docs/delivery/release-evidence.md
+- 门禁结果:
+  - gate: release_approval
+  - status: skipped_not_required
+- 校验结果:
+  - `git diff --check`: PASS
+  - `pnpm run lint`: PASS
+  - `pnpm run typecheck`: PASS
+  - `pnpm run test`: PASS，4 个测试文件，13 个测试通过
+  - `pnpm run coverage`: PASS，lines 100%
+  - `pnpm run build`: PASS，生成 8 个静态页面
+  - `pnpm run smoke`: PASS
+  - `pnpm run e2e`: PASS
+  - `check-release-readiness.sh`: PASS
+  - `check-delivery-artifacts.sh`: PASS，当前 LOW 风险下 artifact enforcement disabled
+  - 浏览器验证: PASS，桌面与 390px 移动端 Header/Nav 无横向溢出，hover 色彩符合低色差目标
+- 风险证据: base:LOW
+- 恢复入口说明: 从该 checkpoint 恢复后，复核 t11 头部导航样式并重新运行质量门禁
+- note: workflow_pass
