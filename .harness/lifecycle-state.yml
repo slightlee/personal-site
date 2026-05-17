@@ -45,7 +45,7 @@ confirmations:
 artifacts:
   manifest: ".harness/project-manifest.yml"
   constraints: ".harness/constraints.md"
-  task_queue: "task-modeling/task-queue.json"
+  task_queue: ".harness/task-modeling/task-queue.json"
 
 baseline:
   push_policy: "required"
