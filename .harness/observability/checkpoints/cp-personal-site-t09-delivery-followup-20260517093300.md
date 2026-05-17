@@ -1,0 +1,42 @@
+# Checkpoint: personal-site-t09 delivery follow-up completed
+
+- task_id: personal-site-t09
+- stage: delivery-followup
+- status: completed
+- timestamp: 2026-05-17T09:33:00+08:00
+- risk_level: LOW
+- approval_status: skipped_not_required
+- 输入摘要:
+  - .harness/project-manifest.yml
+  - /Users/ming/ai-project/ai-skills/harness-enterprise-template/docs/templates/rollback-plan.md
+  - /Users/ming/ai-project/ai-skills/harness-enterprise-template/docs/templates/release-evidence.md
+- 输出摘要:
+  - docs/delivery/rollback-plan.md
+  - docs/delivery/release-evidence.md
+  - docs/delivery/stage-pr.md
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+  - docs/testing/quality-evidence.md
+- 变更文件列表:
+  - docs/delivery/rollback-plan.md
+  - docs/delivery/release-evidence.md
+  - docs/delivery/stage-pr.md
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+  - docs/testing/quality-evidence.md
+- 门禁结果:
+  - gate: release_approval
+  - status: skipped_not_required
+- PR 证据:
+  - url: https://github.com/slightlee/personal-site/pull/2
+  - source_branch: feature-personal-site-t09-delivery-followup
+  - target_branch: develop
+- 校验结果:
+  - quality-gates/validators/check-delivery-artifacts.sh: PASS (LOW 风险下 delivery artifact enforcement disabled，策略允许)
+  - quality-gates/validators/check-release-readiness.sh: PASS
+  - placeholder_scan: PASS
+  - pnpm run test: PASS (4 files, 11 tests)
+  - git diff --check: PASS
+- 风险证据: base:LOW
+- 恢复入口说明: 从该 checkpoint 恢复后，复核 t09 delivery artifacts 并重新运行 delivery/release readiness 校验
+- note: latest_template_delivery_artifacts_completed

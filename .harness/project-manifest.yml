@@ -12,9 +12,9 @@ profile: astro-static-site
 code_paths: src,scripts,vitest.config.mjs
 test_paths: tests
 
-task_id: "personal-site-t08"
+task_id: "personal-site-t09"
 milestone_id: "m1-personal-site"
-slice_id: "s8-seo-a11y-assets"
+slice_id: "s9-quality-delivery"
 actor: agent
 risk_level: LOW
 
@@ -28,12 +28,18 @@ task_queue_auto_commit_on_failure: false
 task_queue_auto_commit_require_clean_start: true
 task_queue_auto_commit_branch_allowlist: "feature-*,task-*,feature/*,task/*"
 task_queue_one_task_per_run: true
+task_queue_execution_strategy: batch
+task_queue_pr_strategy: end_of_batch
+task_queue_batch_max_tasks: 2
+task_queue_batch_allowed_max_risk: LOW
+task_queue_batch_stop_on_risk: MEDIUM
 task_queue_allow_manual_done: true
 task_queue_require_execute_hook: false
 task_queue_require_commit_on_done: true
 require_task_branch: true
 protected_branches: "main,master,develop,release/*"
 task_branch_prefix: "feature-"
+task_branch_require_task_id: false
 target_branch: "develop"
 require_pull_request: true
 require_pr_url: true
@@ -82,4 +88,4 @@ cmd_e2e: "pnpm run e2e"
 cmd_security: ""
 cmd_task_execute: ""
 cmd_git_push: "git push -u origin $(git branch --show-current)"
-cmd_pr_open: "gh pr create --base develop --head $(git branch --show-current) --fill"
+cmd_pr_open: "gh pr view --json url --jq .url || gh pr create --base develop --head $(git branch --show-current) --fill"
