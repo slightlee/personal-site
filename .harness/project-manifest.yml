@@ -1,6 +1,6 @@
 # Bootstrap manifest
 # 复制到业务项目 `.harness/project-manifest.yml`，先填写项目名、路径、远端策略和门禁命令。
-# Bootstrap 阶段不执行 task queue；确认链路完成后再生成 task-modeling/task-queue.json。
+# Bootstrap 阶段不执行 task queue；确认链路完成后再生成 .harness/task-modeling/task-queue.json。
 # 当用户要求按 task queue / harness 流程继续时，本文件是项目任务执行的流程控制源。
 # task_queue_auto_commit / require_task_branch / require_pull_request / cmd_git_push / cmd_pr_open
 # 构成对 harness 交付流程的用户授权；通用 Agent 工作习惯不得覆盖这些授权。
@@ -12,13 +12,13 @@ profile: astro-static-site
 code_paths: src,scripts,vitest.config.mjs
 test_paths: tests
 
-task_id: "personal-site-t10"
+task_id: "personal-site-t11"
 milestone_id: "m1-personal-site"
-slice_id: "s10-visual-refresh"
+slice_id: "s11-header-nav-ui"
 actor: agent
 risk_level: LOW
 
-task_queue_path: task-modeling/task-queue.json
+task_queue_path: .harness/task-modeling/task-queue.json
 constraints_path: .harness/constraints.md
 lifecycle_state_path: .harness/lifecycle-state.yml
 task_queue_auto_approve_max_risk: LOW
@@ -47,7 +47,7 @@ pr_evidence_path: .harness/observability/pr-evidence.json
 workflow_result_path: .harness/observability/last-workflow-result.json
 require_task_evidence: true
 task_evidence_paths: "src,tests,docs,public,scripts,package.json,pnpm-lock.yaml,package-lock.json,yarn.lock"
-task_evidence_exclude_paths: "task-modeling,observability,.harness/observability,node_modules,dist,coverage,.playwright-mcp,.DS_Store"
+task_evidence_exclude_paths: ".harness/task-modeling,observability,.harness/observability,node_modules,dist,coverage,.playwright-mcp,.DS_Store"
 
 approval_provider: manual
 scm_provider: "github"

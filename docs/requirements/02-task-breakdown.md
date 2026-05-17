@@ -33,6 +33,7 @@
 | 8 | personal-site-t08 | 补齐 SEO、可访问性与静态资源 | 增加 metadata、Open Graph、favicon、语义化结构和 alt 规则 | SEO 信息存在，基础 a11y 检查通过 | LOW |
 | 9 | personal-site-t09 | 补齐 smoke、E2E、覆盖率与交付证据 | 增加 smoke/e2e 脚本、测试报告、交付文档，验证 PR/MR 阶段 | 全门禁通过；有 remote/gh 时创建 PR | LOW |
 | 10 | personal-site-t10 | 个人网站视觉精致化改版 | 基于调研方案升级视觉令牌、Hero、作品 preview、写作列表和响应式细节 | 页面更精致统一；首屏有记忆点；作品和文章视觉区分清晰 | LOW |
+| 11 | personal-site-t11 | 优化网站头部导航 UI 样式 | 统一 Header、brand、nav 容器和导航链接状态的色彩层级，降低当前导航区域色差割裂 | 头部导航与 t10 设计令牌一致；hover/focus 清晰；移动端不拥挤 | LOW |
 
 ## T01: 搭建 Astro 项目骨架与 README
 
@@ -247,9 +248,29 @@
 - 文本不重叠、不横向溢出，按钮和标签内容不挤压。
 - `lint`、`typecheck`、`test`、`build` 通过。
 
+## T11: 优化网站头部导航 UI 样式
+
+### 目标
+
+修正头部导航区域与页面整体视觉系统之间的色差割裂，让 Header、品牌入口、导航容器和导航 hover 状态使用同一套低对比纸感色彩层级。
+
+### 业务/技术增量
+
+- 调整 `.site-header` 的背景、边框、阴影和 sticky 容器样式。
+- 统一 `.brand`、`.site-header nav` 和 `.site-header nav a` 的 hover 色彩，避免深色块突兀跳变。
+- 优化移动端导航宽度和文本居中，避免小屏下挤压。
+- 更新 `tests/ui-styles.test.mjs`，保护头部导航低色差与设计令牌约束。
+
+### 验收重点
+
+- 导航默认态和 hover 态不再出现明显色差割裂。
+- Header 与 t10 的 `paper`、`surface`、`border`、`primary-dark` 色彩体系一致。
+- 卡片和导航圆角仍不超过 8px。
+- `lint`、`typecheck`、`test`、`build` 通过。
+
 ## 任务队列生成规则
 
-任务拆解确认后，才能生成 `task-modeling/task-queue.json`。生成队列时应保持：
+任务拆解确认后，才能生成 `.harness/task-modeling/task-queue.json`。生成队列时应保持：
 
 - 每个任务有唯一 `task_id`。
 - `milestone_id` 为 `m1-personal-site`。

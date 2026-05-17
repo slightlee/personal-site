@@ -1,14 +1,13 @@
-# T10 发布证据
+# T11 发布证据
 
 ## 基本信息
 
-- task_id: personal-site-t10
+- task_id: personal-site-t11
 - 发布环境: staging
 - 发布窗口: 2026-05-17
 
 ## 交付物清单
 
-- 页面模板: `src/pages/index.astro`、`src/pages/writing/index.astro`
 - 样式系统: `src/styles/global.css`
 - 测试契约: `tests/ui-styles.test.mjs`
 - 测试与质量证据: `docs/testing/03-test-report.md`、`docs/testing/quality-evidence.md`
@@ -18,9 +17,8 @@
 ## 验证证据
 
 - 测试结果: lint、typecheck、test、coverage、build、smoke、e2e 均通过，详见 `docs/testing/03-test-report.md`。
-- 浏览器结果: 桌面首页、移动首页、移动写作页和移动作品详情页通过无横向溢出检查。
 - 合规报告: `docs/delivery/compliance-report.md`。
-- PR 链接: https://github.com/slightlee/personal-site/pull/3
+- PR 链接: https://github.com/slightlee/personal-site/pull/4
 
 ## 发布结论
 

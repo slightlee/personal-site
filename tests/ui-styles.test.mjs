@@ -32,4 +32,14 @@ describe("ui style contract", () => {
     expect(css).toContain(".writing-item");
     expect(css).not.toMatch(/font-size:[^;]*vw/);
   });
+
+  it("keeps header navigation low-contrast and token-aligned", async () => {
+    const css = await readFile("src/styles/global.css", "utf8");
+
+    expect(css).toContain(".site-header nav");
+    expect(css).toContain("background: rgb(246 242 234 / 64%)");
+    expect(css).toContain("background: rgb(255 253 247 / 88%)");
+    expect(css).toContain("color: var(--color-primary-dark)");
+    expect(css).not.toContain("background: rgb(15 118 110 / 10%)");
+  });
 });
