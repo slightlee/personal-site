@@ -27,6 +27,10 @@
 - 门禁结果:
   - gate: release_approval
   - status: skipped_not_required
+- PR 证据:
+  - url: https://github.com/slightlee/personal-site/pull/2
+  - source_branch: feature-personal-site-t09-delivery-followup
+  - target_branch: develop
 - 校验结果:
   - quality-gates/validators/check-delivery-artifacts.sh: PASS (LOW 风险下 delivery artifact enforcement disabled，策略允许)
   - quality-gates/validators/check-release-readiness.sh: PASS

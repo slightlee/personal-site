@@ -11,7 +11,7 @@
 - 验证项: 代码、测试、安全、构建、smoke、E2E、交付证据
 - 验证结果: PASS
 - 关键证据: `docs/testing/03-test-report.md`、`docs/delivery/release-evidence.md`、`.harness/observability/agent-runs.jsonl`
-- PR 证据: 待本次 t09 follow-up 新 PR 创建后回填
+- PR 证据: https://github.com/slightlee/personal-site/pull/2
 
 ## 风险与回滚
 

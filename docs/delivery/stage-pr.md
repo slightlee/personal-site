@@ -8,7 +8,7 @@
 - 风险等级: LOW
 - 业务目标: 补齐并强化个人网站的 smoke、E2E、覆盖率和交付证据。
 - 变更范围: `scripts`、`docs`、`task-modeling`
-- PR 证据: 待本次 t09 follow-up 新 PR 创建后回填
+- PR 证据: https://github.com/slightlee/personal-site/pull/2
 
 ## 2. 关键实现
 

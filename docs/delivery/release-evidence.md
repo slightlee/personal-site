@@ -19,7 +19,7 @@
 - 测试结果: lint、typecheck、test、coverage、build、smoke、e2e 均通过，详见 `docs/testing/03-test-report.md`。
 - 审批记录: LOW 风险任务通过 `ci_asserted` 自动审批，详见 `.harness/observability/approval-record.json`。
 - 合规报告: `docs/delivery/compliance-report.md`。
-- PR 链接: 待本次 t09 follow-up 新 PR 创建后回填
+- PR 链接: https://github.com/slightlee/personal-site/pull/2
 
 ## 发布结论
 
