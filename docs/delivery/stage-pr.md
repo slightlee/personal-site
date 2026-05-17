@@ -8,7 +8,7 @@
 - 风险等级: LOW
 - 业务目标: 优化网站头部导航 UI 样式，降低 Header 与页面主体之间的色差割裂。
 - 变更范围: `src/styles`、`tests`、`docs`、`.harness/task-modeling`
-- PR 证据: 待本次 t11 新 PR 创建后回填
+- PR 证据: https://github.com/slightlee/personal-site/pull/4
 
 ## 2. 关键实现
 

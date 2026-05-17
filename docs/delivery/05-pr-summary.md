@@ -11,7 +11,7 @@
 - 验证项: 代码、测试、覆盖率、构建、smoke、E2E、头部导航样式契约
 - 验证结果: PASS
 - 关键证据: `docs/testing/03-test-report.md`、`docs/delivery/release-evidence.md`
-- PR 证据: 待本次 t11 新 PR 创建后回填
+- PR 证据: https://github.com/slightlee/personal-site/pull/4
 
 ## 风险与回滚
 

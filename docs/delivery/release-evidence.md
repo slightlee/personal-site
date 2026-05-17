@@ -18,7 +18,7 @@
 
 - 测试结果: lint、typecheck、test、coverage、build、smoke、e2e 均通过，详见 `docs/testing/03-test-report.md`。
 - 合规报告: `docs/delivery/compliance-report.md`。
-- PR 链接: 待本次 t11 新 PR 创建后回填
+- PR 链接: https://github.com/slightlee/personal-site/pull/4
 
 ## 发布结论
 
