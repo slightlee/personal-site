@@ -1,10 +1,13 @@
 {
-  "task_id": "personal-site-t08",
-  "run_id": "run-20260516213717-5351",
-  "source_branch": "feature-personal-site-t08-seo-a11y-assets",
+  "task_ids": [
+    "personal-site-t09"
+  ],
+  "run_id": "personal-site-t09-delivery-followup",
+  "source_branch": "feature-personal-site-t09-delivery-followup",
   "target_branch": "develop",
-  "url": "https://github.com/slightlee/personal-site/pull/1",
-  "command": "gh pr create --base develop --head $(git branch --show-current) --fill",
-  "output": "https://github.com/slightlee/personal-site/pull/1",
-  "created_at": "2026-05-16T21:37:42+08:00"
+  "status": "pending_pr_creation",
+  "url": "",
+  "command": "gh pr create --base develop --head feature-personal-site-t09-delivery-followup --fill",
+  "output": "",
+  "updated_at": "2026-05-17T11:57:29+08:00"
 }

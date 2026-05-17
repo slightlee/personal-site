@@ -24,3 +24,5 @@
 - PR 交付说明: `docs/delivery/stage-pr.md`
 - PR 摘要: `docs/delivery/05-pr-summary.md`
 - 合规报告: `docs/delivery/compliance-report.md`
+- 回滚方案: `docs/delivery/rollback-plan.md`
+- 发布证据: `docs/delivery/release-evidence.md`

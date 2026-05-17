@@ -16,11 +16,13 @@
 | 审计日志完整 | PASS | `.harness/observability/agent-runs.jsonl` |
 | 人工审批符合策略 | PASS | LOW 风险任务，release approval 可按策略跳过或自动通过 |
 | 敏感信息处理合规 | PASS | 未新增密钥、凭据或生产数据 |
+| 回滚与发布证据完整 | PASS | `docs/delivery/rollback-plan.md`、`docs/delivery/release-evidence.md` |
 
 ## 例外说明
 
 - `gitleaks` 未安装，workflow 跳过深度 secret 扫描；基础 secret 扫描通过。
 - `pnpm audit` 报告 low/moderate 风险，未达到当前阻断阈值。
+- 生产发布不在 t09 范围内；当前发布证据限定为 staging 交付就绪判断。
 
 ## 结论
 
