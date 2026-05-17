@@ -30,18 +30,33 @@ const writings = (await getCollection("writing"))
           <a class="button secondary" href="/writing/">阅读文章</a>
         </div>
       </div>
-      <aside class="hero-panel" aria-label="个人概要">
-        <p class="panel-label">当前状态</p>
-        <p>{profile.availability}</p>
-        <div class="stats-grid">
-          {
-            profile.stats.map((item) => (
-              <div>
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
-              </div>
-            ))
-          }
+      <aside class="hero-visual" aria-label="个人概要">
+        <div class="workspace-preview" aria-hidden="true">
+          <div class="preview-toolbar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="preview-board">
+            <div class="preview-column wide"></div>
+            <div class="preview-column"></div>
+            <div class="preview-line"></div>
+            <div class="preview-line short"></div>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <p class="panel-label">当前状态</p>
+          <p>{profile.availability}</p>
+          <div class="stats-grid">
+            {
+              profile.stats.map((item) => (
+                <div>
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
+                </div>
+              ))
+            }
+          </div>
         </div>
       </aside>
     </section>
@@ -97,8 +112,20 @@ const writings = (await getCollection("writing"))
       </div>
       <div class="works-grid">
         {
-          works.map((work) => (
+          works.map((work, index) => (
             <article class="work-card">
+              <div class={`work-preview preview-${(index % 3) + 1}`} aria-hidden="true">
+                <div class="preview-window">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="preview-content">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
               <p class="work-meta">
                 {work.data.role} · {work.data.date.getFullYear()}
               </p>
@@ -123,16 +150,19 @@ const writings = (await getCollection("writing"))
       <div class="writing-list">
         {
           writings.map((post) => (
-            <article>
-              <p class="work-meta">
-                {post.data.date.getFullYear()} · {post.data.tags.join(" / ")}
-              </p>
-              <h3>
-                <a href={`/writing/${writingSlugFromId(post.id)}/`}>
-                  {post.data.title}
-                </a>
-              </h3>
-              <p>{post.data.description}</p>
+            <article class="writing-item">
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.getFullYear()}
+              </time>
+              <div>
+                <p class="work-meta">{post.data.tags.join(" / ")}</p>
+                <h3>
+                  <a href={`/writing/${writingSlugFromId(post.id)}/`}>
+                    {post.data.title}
+                  </a>
+                </h3>
+                <p>{post.data.description}</p>
+              </div>
             </article>
           ))
         }

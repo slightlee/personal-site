@@ -1,0 +1,53 @@
+# Checkpoint: personal-site-t10 visual refresh passed
+
+- task_id: personal-site-t10
+- stage: pr
+- status: passed
+- timestamp: 2026-05-17T12:32:54+08:00
+- risk_level: LOW
+- approval_status: skipped_not_required
+- 输入摘要:
+  - docs/design/04-visual-refresh-plan.md
+  - src/pages/index.astro
+  - src/pages/writing/index.astro
+  - src/styles/global.css
+  - tests/ui-styles.test.mjs
+- 输出摘要:
+  - docs/testing/03-test-report.md
+  - docs/review/04-review.md
+  - docs/delivery/stage-pr.md
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+  - docs/delivery/rollback-plan.md
+  - docs/delivery/release-evidence.md
+- 变更文件列表:
+  - .harness/project-manifest.yml
+  - task-modeling/task-queue.json
+  - src/pages/index.astro
+  - src/pages/writing/index.astro
+  - src/styles/global.css
+  - tests/ui-styles.test.mjs
+  - docs/testing/03-test-report.md
+  - docs/testing/quality-evidence.md
+  - docs/review/04-review.md
+  - docs/delivery/stage-pr.md
+  - docs/delivery/05-pr-summary.md
+  - docs/delivery/compliance-report.md
+  - docs/delivery/rollback-plan.md
+  - docs/delivery/release-evidence.md
+- 门禁结果:
+  - gate: release_approval
+  - status: skipped_not_required
+- 校验结果:
+  - pnpm run lint: PASS
+  - pnpm run typecheck: PASS
+  - pnpm run test: PASS (4 files, 12 tests)
+  - pnpm run coverage: PASS (100% lines)
+  - pnpm run build: PASS
+  - pnpm run smoke: PASS
+  - pnpm run e2e: PASS
+  - browser_desktop_home: PASS
+  - browser_mobile_overflow: PASS
+- 风险证据: base:LOW
+- 恢复入口说明: 从该 checkpoint 恢复后，复核 t10 视觉刷新范围并重新运行质量门禁
+- note: workflow_pass
