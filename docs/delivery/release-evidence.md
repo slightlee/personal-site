@@ -20,7 +20,7 @@
 - 测试结果: lint、typecheck、test、coverage、build、smoke、e2e 均通过，详见 `docs/testing/03-test-report.md`。
 - 浏览器结果: 桌面首页、移动首页、移动写作页和移动作品详情页通过无横向溢出检查。
 - 合规报告: `docs/delivery/compliance-report.md`。
-- PR 链接: 待本次 t10 新 PR 创建后回填
+- PR 链接: https://github.com/slightlee/personal-site/pull/3
 
 ## 发布结论
 

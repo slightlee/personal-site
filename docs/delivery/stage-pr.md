@@ -8,7 +8,7 @@
 - 风险等级: LOW
 - 业务目标: 完成个人网站视觉精致化改版，提升首屏识别度、作品展示承载和写作阅读节奏。
 - 变更范围: `src/pages`、`src/styles`、`tests`、`docs`、`task-modeling`
-- PR 证据: 待本次 t10 新 PR 创建后回填
+- PR 证据: https://github.com/slightlee/personal-site/pull/3
 
 ## 2. 关键实现
 

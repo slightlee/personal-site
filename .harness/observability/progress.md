@@ -17,7 +17,7 @@
 | code | passed | Implementer | 2026-05-17T12:32:05+08:00 | stage_passed |
 | test | passed | Tester | 2026-05-17T12:32:54+08:00 | stage_passed |
 | review | passed | Reviewer | 2026-05-17T12:32:54+08:00 | stage_passed |
-| pr | pending | Release Manager | 2026-05-17T12:32:54+08:00 | pending_pr_creation |
+| pr | passed | Release Manager | 2026-05-17T12:38:17+08:00 | pr_created |
 
 ## 当前阻塞
 
@@ -25,4 +25,4 @@
 
 ## 下一个动作
 
-- 创建 t10 PR 并回填 PR 证据
+- 等待 t10 PR review / merge

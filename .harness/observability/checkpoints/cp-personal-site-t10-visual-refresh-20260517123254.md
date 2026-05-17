@@ -38,6 +38,10 @@
 - 门禁结果:
   - gate: release_approval
   - status: skipped_not_required
+- PR 证据:
+  - url: https://github.com/slightlee/personal-site/pull/3
+  - source_branch: feature-personal-site-t10-visual-refresh
+  - target_branch: develop
 - 校验结果:
   - pnpm run lint: PASS
   - pnpm run typecheck: PASS
