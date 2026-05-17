@@ -124,8 +124,11 @@
       "title": "个人网站视觉精致化改版",
       "actor": "agent",
       "risk_level": "LOW",
-      "status": "todo",
-      "attempts": 0
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-17T12:31:30+08:00",
+      "completed_at": "2026-05-17T12:32:54+08:00",
+      "note": "workflow_pass"
     }
   ]
 }

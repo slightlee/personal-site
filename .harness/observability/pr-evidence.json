@@ -1,13 +1,13 @@
 {
   "task_ids": [
-    "personal-site-t09"
+    "personal-site-t10"
   ],
-  "run_id": "personal-site-t09-delivery-followup",
-  "source_branch": "feature-personal-site-t09-delivery-followup",
+  "run_id": "personal-site-t10-visual-refresh",
+  "source_branch": "feature-personal-site-t10-visual-refresh",
   "target_branch": "develop",
   "status": "created",
-  "url": "https://github.com/slightlee/personal-site/pull/2",
-  "command": "gh pr create --base develop --head feature-personal-site-t09-delivery-followup --title \"personal-site t09 quality delivery evidence\" --body <summary>",
-  "output": "https://github.com/slightlee/personal-site/pull/2",
-  "created_at": "2026-05-17T11:59:29+08:00"
+  "url": "https://github.com/slightlee/personal-site/pull/3",
+  "command": "gh pr create --base develop --head feature-personal-site-t10-visual-refresh --title \"personal-site t10 visual refresh\" --body <summary>",
+  "output": "https://github.com/slightlee/personal-site/pull/3",
+  "created_at": "2026-05-17T12:38:17+08:00"
 }

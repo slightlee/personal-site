@@ -1,24 +1,24 @@
-# T09 回滚方案
+# T10 回滚方案
 
 ## 基本信息
 
-- task_id: personal-site-t09
+- task_id: personal-site-t10
 - 目标环境: staging
 - 负责人: agent
 
 ## 回滚触发条件
 
-- smoke 或 E2E 脚本在已知正常静态产物上持续误报，影响后续任务交付判断。
-- 覆盖率、交付证据或 harness 门禁配置导致 PR 检查无法稳定复现。
-- t09 文档证据与实际门禁结果不一致，影响审计链路可信度。
+- 首页、写作页或作品详情页在移动端出现文本重叠、横向溢出或关键内容不可读。
+- 视觉刷新导致 `pnpm run build`、`pnpm run smoke` 或 `pnpm run e2e` 失败。
+- 用户评审认为视觉方向偏离 Editorial Engineer Portfolio 定位，需要恢复到 t09 状态。
 
 ## 回滚步骤
 
-1. 回滚 t09 任务提交中涉及的质量脚本、测试证据和交付文档变更。
-2. 重新运行 `pnpm run build`、`pnpm run smoke` 和 `pnpm run e2e`，确认静态产物检查恢复到回滚后的预期状态。
-3. 更新 `docs/testing/03-test-report.md`、`docs/review/04-review.md` 和 `.harness/observability` 中对应恢复说明，保持审计记录可追溯。
+1. 回滚 t10 任务提交中涉及的 `src/pages`、`src/styles`、`tests` 和交付文档变更。
+2. 重新运行 `pnpm run lint`、`pnpm run typecheck`、`pnpm run test`、`pnpm run build`、`pnpm run smoke` 和 `pnpm run e2e`。
+3. 使用浏览器复查首页、写作页和作品详情页，确认回滚后无横向溢出或文本重叠。
 
 ## 验证方式
 
-- 回滚后执行 `pnpm run lint`、`pnpm run typecheck`、`pnpm run test`、`pnpm run coverage`、`pnpm run smoke` 和 `pnpm run e2e`。
-- 确认 `docs/delivery/stage-pr.md`、`docs/delivery/05-pr-summary.md`、`docs/delivery/compliance-report.md` 与实际验证结果一致。
+- 回滚后质量门禁全部通过。
+- `task-modeling/task-queue.json`、`.harness/project-manifest.yml` 和交付文档恢复到回滚后的任务状态。

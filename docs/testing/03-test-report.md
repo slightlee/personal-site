@@ -1,36 +1,37 @@
-# T09 测试报告
+# T10 测试报告
 
 ## 基本信息
 
-- task_id: personal-site-t09
+- task_id: personal-site-t10
 - 测试阶段: test
 - 测试人: agent
-- 测试时间: 2026-05-16
+- 测试时间: 2026-05-17
 
 ## 验证摘要
 
-- `check-code.sh`: PASS
-- `check-tests.sh`: PASS
-- `check-security.sh`: PASS
-- smoke: PASS
-- e2e: PASS
-- 覆盖率: 100% lines，达到 manifest 中 80% 门槛
+- `pnpm run lint`: PASS
+- `pnpm run typecheck`: PASS
+- `pnpm run test`: PASS，4 个测试文件，12 个测试通过
+- `pnpm run coverage`: PASS，100% lines，达到 manifest 中 80% 门槛
+- `pnpm run build`: PASS，生成 8 个静态页面
+- `pnpm run smoke`: PASS
+- `pnpm run e2e`: PASS
+- 浏览器桌面与移动端检查: PASS
 
 ## 测试范围
 
 - 已覆盖:
-  - lint、typecheck、unit test、coverage、build、smoke、e2e 的完整本地门禁。
-  - smoke 对首页、作品详情、写作页、文章详情和静态资源产物的存在性检查。
-  - e2e 对首页、作品详情、写作列表、文章详情、联系入口和 SEO metadata 的静态产物检查。
-  - workflow 审计、review、PR 交付文档和合规报告。
+  - CSS 设计令牌、卡片圆角、focus、响应式、reduced motion 和字体缩放约束。
+  - Hero 视觉模块、作品 preview 区、写作列表结构和详情页元信息卡片。
+  - 首页、写作页、作品详情页在移动视口下无横向溢出。
+  - 静态构建、smoke 和 E2E 产物检查。
 - 未覆盖:
-  - 真实浏览器跨设备视觉回归；当前任务聚焦质量脚本和交付证据。
+  - 自动化视觉回归像素对比；当前通过浏览器截图和 DOM 溢出检测完成人工辅助验证。
 
 ## 缺陷与风险
 
-- `pnpm audit` 在前序 workflow 中报告 1 个 low 和 1 个 moderate 漏洞，未触发 high-level security 阻断。
-- `gitleaks` 未安装，workflow 已记录为深度 secret 扫描跳过；基础 secret 扫描通过。
+- 并行执行 `smoke` 和 `e2e` 时曾因两个 build 同时写入 `dist` 产生一次产物竞争；单独重跑 `smoke` 通过，判定为执行方式问题，不是代码缺陷。
 
 ## 结论
 
-- t09 质量脚本、覆盖率和交付证据验证通过，可进入 review 阶段。
+- t10 视觉刷新、响应式和交付验证通过，可进入 review / PR 阶段。

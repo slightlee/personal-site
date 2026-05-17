@@ -31,16 +31,19 @@ const posts = (await getCollection("writing")).sort(
       <div class="writing-list">
         {
           posts.map((post) => (
-            <article>
-              <p class="work-meta">
-                {post.data.date.getFullYear()} · {post.data.tags.join(" / ")}
-              </p>
-              <h3>
-                <a href={`/writing/${writingSlugFromId(post.id)}/`}>
-                  {post.data.title}
-                </a>
-              </h3>
-              <p>{post.data.description}</p>
+            <article class="writing-item">
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.getFullYear()}
+              </time>
+              <div>
+                <p class="work-meta">{post.data.tags.join(" / ")}</p>
+                <h3>
+                  <a href={`/writing/${writingSlugFromId(post.id)}/`}>
+                    {post.data.title}
+                  </a>
+                </h3>
+                <p>{post.data.description}</p>
+              </div>
             </article>
           ))
         }
