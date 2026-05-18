@@ -40,6 +40,6 @@ pnpm run e2e
 - 项目约束: `.harness/constraints.md`
 - 生命周期状态: `.harness/lifecycle-state.yml`
 - 项目 manifest: `.harness/project-manifest.yml`
-- 任务队列: `task-modeling/task-queue.json`
+- 任务队列: `.harness/task-modeling/task-queue.json`
 
 实现任务应在 `feature-` 前缀分支上执行，并通过 lint、typecheck、test、coverage、smoke、e2e 后再进入 PR/MR。

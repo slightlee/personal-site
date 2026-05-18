@@ -31,7 +31,7 @@ Bootstrap 阶段只允许创建项目壳和治理文件，不允许直接进入�
 - `docs/testing/`
 - `docs/review/`
 - `docs/delivery/`
-- `task-modeling/`
+- `.harness/task-modeling/`
 
 禁止创建或执行：
 
@@ -74,10 +74,10 @@ project_shell_created
 - 未确认技术方案前，不允许决定 UI 设计是否需要。
 - 如果 `ui_design.required=true`，未确认 UI 设计前不允许生成任务拆解。
 - 如果 `ui_design.required=false`，必须填写跳过原因后才允许生成任务拆解。
-- 未确认任务拆解前，不允许生成 `task-modeling/task-queue.json`。
-- 未生成并校验 `task-modeling/task-queue.json` 前，不允许创建业务代码。
+- 未确认任务拆解前，不允许生成 `.harness/task-modeling/task-queue.json`。
+- 未生成并校验 `.harness/task-modeling/task-queue.json` 前，不允许创建业务代码。
 - `task_queue_created` 后必须先提交规划基线，再进入 `implementation_ready`。
-- 规划基线必须至少包含 `.harness/`、PRD、技术方案、UI 设计决策或文档、任务拆解文档和 `task-modeling/task-queue.json`。
+- 规划基线必须至少包含 `.harness/`、PRD、技术方案、UI 设计决策或文档、任务拆解文档和 `.harness/task-modeling/task-queue.json`。
 - 规划基线 SHA 可通过第二个治理提交写回 `.harness/lifecycle-state.yml`，但第二个提交仍不得包含业务代码。
 - 企业级默认要求规划基线 push 到远程基线分支；未完成 `planning_baseline_pushed` 前，不允许进入 `implementation_ready`。
 - `baseline.push_policy=required` 时，必须记录 `baseline.planning_pushed=true`、`baseline.remote`、`baseline.remote_branch` 和 `baseline.pushed_at`。

@@ -84,9 +84,9 @@ personal-site/
 │   ├── project-manifest.yml
 │   ├── constraints.md
 │   ├── lifecycle-state.yml
+│   ├── task-modeling/
 │   └── observability/
 ├── docs/
-├── task-modeling/
 ├── public/
 │   └── favicon.svg
 ├── src/

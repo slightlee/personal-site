@@ -7,7 +7,7 @@
 - task_id: personal-site-t10
 - 风险等级: LOW
 - 业务目标: 完成个人网站视觉精致化改版，提升首屏识别度、作品展示承载和写作阅读节奏。
-- 变更范围: `src/pages`、`src/styles`、`tests`、`docs`、`task-modeling`
+- 变更范围: `src/pages`、`src/styles`、`tests`、`docs`、`.harness/task-modeling`
 - PR 证据: https://github.com/slightlee/personal-site/pull/3
 
 ## 2. 关键实现

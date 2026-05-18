@@ -249,7 +249,7 @@
 
 ## 任务队列生成规则
 
-任务拆解确认后，才能生成 `task-modeling/task-queue.json`。生成队列时应保持：
+任务拆解确认后，才能生成 `.harness/task-modeling/task-queue.json`。生成队列时应保持：
 
 - 每个任务有唯一 `task_id`。
 - `milestone_id` 为 `m1-personal-site`。

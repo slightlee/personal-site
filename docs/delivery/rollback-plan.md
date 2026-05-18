@@ -21,4 +21,4 @@
 ## 验证方式
 
 - 回滚后质量门禁全部通过。
-- `task-modeling/task-queue.json`、`.harness/project-manifest.yml` 和交付文档恢复到回滚后的任务状态。
+- `.harness/task-modeling/task-queue.json`、`.harness/project-manifest.yml` 和交付文档恢复到回滚后的任务状态。
