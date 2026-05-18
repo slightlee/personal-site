@@ -1,47 +1,47 @@
 {
   "project_name": "personal-site",
-  "task_id": "personal-site-t11",
+  "task_id": "personal-site-t12",
   "milestone_id": "m1-personal-site",
-  "slice_id": "s11-header-nav-ui",
-  "updated_at": "2026-05-17T17:10:31+08:00",
+  "slice_id": "s12-zmoee-inspired-layout",
+  "updated_at": "2026-05-18T18:35:20+08:00",
   "blockers": [],
-  "next_action": "等待 t11 PR 审查与合并",
+  "next_action": "等待 t12 PR 审查与合并",
   "stages": {
     "requirement": {
       "status": "passed",
       "owner": "Planner",
-      "updated_at": "2026-05-17T16:24:19+08:00",
+      "updated_at": "2026-05-18T14:56:48+08:00",
       "note": "stage_passed"
     },
     "design": {
       "status": "passed",
       "owner": "Architect",
-      "updated_at": "2026-05-17T16:24:19+08:00",
+      "updated_at": "2026-05-18T14:56:48+08:00",
       "note": "stage_passed"
     },
     "code": {
       "status": "passed",
       "owner": "Implementer",
-      "updated_at": "2026-05-17T16:24:19+08:00",
+      "updated_at": "2026-05-18T14:56:48+08:00",
       "note": "stage_passed"
     },
     "test": {
       "status": "passed",
       "owner": "Tester",
-      "updated_at": "2026-05-17T16:24:19+08:00",
+      "updated_at": "2026-05-18T15:11:33+08:00",
       "note": "stage_passed"
     },
     "review": {
       "status": "passed",
       "owner": "Reviewer",
-      "updated_at": "2026-05-17T16:24:19+08:00",
+      "updated_at": "2026-05-18T15:11:33+08:00",
       "note": "stage_passed"
     },
     "pr": {
       "status": "passed",
       "owner": "Release Manager",
-      "updated_at": "2026-05-17T17:10:31+08:00",
-      "note": "https://github.com/slightlee/personal-site/pull/4"
+      "updated_at": "2026-05-18T18:35:20+08:00",
+      "note": "https://github.com/slightlee/personal-site/pull/5"
     }
   }
 }

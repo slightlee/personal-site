@@ -142,6 +142,19 @@
       "started_at": "2026-05-17T16:24:19+08:00",
       "completed_at": "2026-05-17T16:24:19+08:00",
       "note": "workflow_pass"
+    },
+    {
+      "task_id": "personal-site-t12",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s12-zmoee-inspired-layout",
+      "title": "参考 ZmoEe 优化首页与文章详情布局",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-18T14:56:48+08:00",
+      "completed_at": "2026-05-18T14:56:48+08:00",
+      "note": "workflow_pass"
     }
   ]
 }

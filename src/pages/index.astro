@@ -18,6 +18,10 @@ const writings = (await getCollection("writing"))
 <BaseLayout>
   <a class="skip-link" href="#main-content">跳到主要内容</a>
   <main class="page-shell" id="main-content">
+    <div class="notice-strip" aria-label="站点说明">
+      <span>内容系统、工程实践与长期写作的个人主页</span>
+    </div>
+
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">个人网站</p>
@@ -61,128 +65,134 @@ const writings = (await getCollection("writing"))
       </aside>
     </section>
 
-    <section class="section" aria-labelledby="about-title">
-      <div class="section-heading">
-        <p class="eyebrow">关于我</p>
-        <h2 id="about-title">把想法落成可靠的软件</h2>
-      </div>
-      <p>
-        我长期关注内容型产品、前端架构、自动化交付和测试策略。这个网站本身也是一个小型案例：
-        用 Astro 管理静态页面，用 Markdown 维护作品内容，用任务队列和质量门禁约束交付过程。
-      </p>
-      <div class="highlight-strip" aria-label="个人定位摘要">
-        <span>{profile.location}</span>
-        <span>内容优先</span>
-        <span>工程可信</span>
-        <span>持续维护</span>
-      </div>
-    </section>
+    <div class="home-layout">
+      <div class="home-main">
+        <section class="section" aria-labelledby="about-title">
+          <div class="section-heading">
+            <p class="eyebrow">关于我</p>
+            <h2 id="about-title">把想法落成可靠的软件</h2>
+          </div>
+          <p>
+            我长期关注内容型产品、前端架构、自动化交付和测试策略。这个网站本身也是一个小型案例：
+            用 Astro 管理静态页面，用 Markdown 维护作品内容，用任务队列和质量门禁约束交付过程。
+          </p>
+          <div class="highlight-strip" aria-label="个人定位摘要">
+            <span>{profile.location}</span>
+            <span>内容优先</span>
+            <span>工程可信</span>
+            <span>持续维护</span>
+          </div>
+        </section>
 
-    <section class="section" aria-labelledby="principles-title">
-      <div class="section-heading">
-        <p class="eyebrow">工作方式</p>
-        <h2 id="principles-title">我如何推进一个项目</h2>
-      </div>
-      <div class="principle-grid">
-        {
-          profile.principles.map((item) => (
-            <article class="principle-card">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))
-        }
-      </div>
-    </section>
+        <section class="section" id="works" aria-labelledby="works-title">
+          <div class="section-heading">
+            <p class="eyebrow">代表作品</p>
+            <h2 id="works-title">代表作品</h2>
+          </div>
+          <div class="works-grid">
+            {
+              works.map((work, index) => (
+                <article class="work-card">
+                  <div class={`work-preview preview-${(index % 3) + 1}`} aria-hidden="true">
+                    <div class="preview-window">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <div class="preview-content">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <p class="work-meta">
+                    {work.data.role} · {work.data.date.getFullYear()}
+                  </p>
+                  <h3>
+                    <a href={`/work/${workSlugFromId(work.id)}/`}>{work.data.title}</a>
+                  </h3>
+                  <p>{work.data.summary}</p>
+                  <ul class="tag-list compact" aria-label={`${work.data.title} 技术标签`}>
+                    {work.data.tags.map((tag) => <li>{tag}</li>)}
+                  </ul>
+                </article>
+              ))
+            }
+          </div>
+        </section>
 
-    <section class="section" aria-labelledby="skills-title">
-      <div class="section-heading">
-        <p class="eyebrow">能力方向</p>
-        <h2 id="skills-title">核心能力</h2>
+        <section class="section" id="writing" aria-labelledby="writing-title">
+          <div class="section-heading">
+            <p class="eyebrow">写作</p>
+            <h2 id="writing-title">最新文章与观点</h2>
+          </div>
+          <div class="writing-list">
+            {
+              writings.map((post) => (
+                <article class="writing-item">
+                  <time datetime={post.data.date.toISOString()}>
+                    {post.data.date.getFullYear()}
+                  </time>
+                  <div>
+                    <p class="work-meta">{post.data.tags.join(" / ")}</p>
+                    <h3>
+                      <a href={`/writing/${writingSlugFromId(post.id)}/`}>
+                        {post.data.title}
+                      </a>
+                    </h3>
+                    <p>{post.data.description}</p>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+          <a class="text-link" href="/writing/">查看全部文章</a>
+        </section>
       </div>
-      <ul class="tag-list">
-        {profile.skills.map((skill) => <li>{skill}</li>)}
-      </ul>
-    </section>
 
-    <section class="section" id="works" aria-labelledby="works-title">
-      <div class="section-heading">
-        <p class="eyebrow">代表作品</p>
-        <h2 id="works-title">代表作品</h2>
-      </div>
-      <div class="works-grid">
-        {
-          works.map((work, index) => (
-            <article class="work-card">
-              <div class={`work-preview preview-${(index % 3) + 1}`} aria-hidden="true">
-                <div class="preview-window">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="preview-content">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-              <p class="work-meta">
-                {work.data.role} · {work.data.date.getFullYear()}
-              </p>
-              <h3>
-                <a href={`/work/${workSlugFromId(work.id)}/`}>{work.data.title}</a>
-              </h3>
-              <p>{work.data.summary}</p>
-              <ul class="tag-list compact" aria-label={`${work.data.title} 技术标签`}>
-                {work.data.tags.map((tag) => <li>{tag}</li>)}
-              </ul>
-            </article>
-          ))
-        }
-      </div>
-    </section>
+      <aside class="home-aside" aria-label="站点侧栏">
+        <section class="aside-panel" aria-labelledby="principles-title">
+          <div class="section-heading">
+            <p class="eyebrow">工作方式</p>
+            <h2 id="principles-title">推进方式</h2>
+          </div>
+          <div class="principle-grid compact-panel">
+            {
+              profile.principles.map((item) => (
+                <article class="principle-card">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))
+            }
+          </div>
+        </section>
 
-    <section class="section" id="writing" aria-labelledby="writing-title">
-      <div class="section-heading">
-        <p class="eyebrow">写作</p>
-        <h2 id="writing-title">最新文章与观点</h2>
-      </div>
-      <div class="writing-list">
-        {
-          writings.map((post) => (
-            <article class="writing-item">
-              <time datetime={post.data.date.toISOString()}>
-                {post.data.date.getFullYear()}
-              </time>
-              <div>
-                <p class="work-meta">{post.data.tags.join(" / ")}</p>
-                <h3>
-                  <a href={`/writing/${writingSlugFromId(post.id)}/`}>
-                    {post.data.title}
-                  </a>
-                </h3>
-                <p>{post.data.description}</p>
-              </div>
-            </article>
-          ))
-        }
-      </div>
-      <a class="text-link" href="/writing/">查看全部文章</a>
-    </section>
+        <section class="aside-panel" aria-labelledby="skills-title">
+          <div class="section-heading">
+            <p class="eyebrow">能力方向</p>
+            <h2 id="skills-title">核心能力</h2>
+          </div>
+          <ul class="tag-list">
+            {profile.skills.map((skill) => <li>{skill}</li>)}
+          </ul>
+        </section>
 
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="section-heading">
-        <p class="eyebrow">联系</p>
-        <h2 id="contact-title">保持联系</h2>
-      </div>
-      <p>欢迎通过邮件或公开链接联系我，讨论产品工程、内容系统和自动化交付。</p>
-      <div class="social-links">
-        {
-          profile.socialLinks.map((link) => (
-            <a href={link.href}>{link.label}</a>
-          ))
-        }
-      </div>
-    </section>
+        <section class="aside-panel contact" id="contact" aria-labelledby="contact-title">
+          <div class="section-heading">
+            <p class="eyebrow">联系</p>
+            <h2 id="contact-title">保持联系</h2>
+          </div>
+          <p>欢迎通过邮件或公开链接联系我，讨论产品工程、内容系统和自动化交付。</p>
+          <div class="social-links">
+            {
+              profile.socialLinks.map((link) => (
+                <a href={link.href}>{link.label}</a>
+              ))
+            }
+          </div>
+        </section>
+      </aside>
+    </div>
   </main>
 </BaseLayout>
