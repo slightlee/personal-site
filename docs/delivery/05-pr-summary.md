@@ -11,7 +11,7 @@
 - 验证项: 代码、测试、覆盖率、构建、smoke、E2E、浏览器响应式检查
 - 验证结果: PASS
 - 关键证据: `docs/testing/03-test-report.md`、`docs/delivery/release-evidence.md`
-- PR 证据: 待本次 t12 新 PR 创建后回填
+- PR 证据: https://github.com/slightlee/personal-site/pull/5
 
 ## 风险与回滚
 

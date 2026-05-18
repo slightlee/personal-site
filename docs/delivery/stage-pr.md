@@ -8,7 +8,7 @@
 - 风险等级: LOW
 - 业务目标: 参考 ZmoEe 首页与文章详情页的信息结构，优化个人网站首页内容枢纽感和文章阅读布局。
 - 变更范围: `.harness`、`docs`、`src/pages`、`src/styles`、`tests`
-- PR 证据: 待本次 t12 新 PR 创建后回填
+- PR 证据: https://github.com/slightlee/personal-site/pull/5
 
 ## 2. 关键实现
 
