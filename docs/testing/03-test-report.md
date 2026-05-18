@@ -11,7 +11,7 @@
 
 - `pnpm run lint`: PASS
 - `pnpm run typecheck`: PASS
-- `pnpm run test`: PASS，4 个测试文件，13 个测试通过
+- `pnpm run test`: PASS，4 个测试文件，14 个测试通过
 - `pnpm run coverage`: PASS，100% lines，达到 manifest 中 80% 门槛
 - `pnpm run build`: PASS，生成 8 个静态页面
 - `pnpm run smoke`: PASS

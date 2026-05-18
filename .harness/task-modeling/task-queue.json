@@ -131,6 +131,19 @@
       "note": "workflow_pass"
     },
     {
+      "task_id": "personal-site-t11",
+      "milestone_id": "m1-personal-site",
+      "slice_id": "s11-header-nav-ui",
+      "title": "优化网站头部导航 UI 样式",
+      "actor": "agent",
+      "risk_level": "LOW",
+      "status": "done",
+      "attempts": 1,
+      "started_at": "2026-05-17T16:24:19+08:00",
+      "completed_at": "2026-05-17T16:24:19+08:00",
+      "note": "workflow_pass"
+    },
+    {
       "task_id": "personal-site-t12",
       "milestone_id": "m1-personal-site",
       "slice_id": "s12-zmoee-inspired-layout",

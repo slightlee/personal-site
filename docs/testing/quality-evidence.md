@@ -11,7 +11,7 @@
 |---|---|---|
 | `pnpm run lint` | PASS | 检查项目必需文件和脚本配置 |
 | `pnpm run typecheck` | PASS | Astro 类型检查无错误 |
-| `pnpm run test` | PASS | 4 个测试文件，13 个测试通过 |
+| `pnpm run test` | PASS | 4 个测试文件，14 个测试通过 |
 | `pnpm run coverage` | PASS | lines 100%，达到 80% 门槛 |
 | `pnpm run build` | PASS | 生成 8 个静态页面 |
 | `pnpm run smoke` | PASS | 检查核心页面、metadata 和静态资源产物 |
