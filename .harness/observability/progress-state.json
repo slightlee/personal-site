@@ -1,47 +1,47 @@
 {
   "project_name": "personal-site",
-  "task_id": "personal-site-t10",
+  "task_id": "personal-site-t12",
   "milestone_id": "m1-personal-site",
-  "slice_id": "s10-visual-refresh",
-  "updated_at": "2026-05-17T12:32:54+08:00",
+  "slice_id": "s12-zmoee-inspired-layout",
+  "updated_at": "2026-05-18T15:11:33+08:00",
   "blockers": [],
-  "next_action": "等待 t10 PR review / merge",
+  "next_action": "创建 t12 PR 并回填 PR 证据",
   "stages": {
     "requirement": {
       "status": "passed",
       "owner": "Planner",
-      "updated_at": "2026-05-17T12:31:30+08:00",
+      "updated_at": "2026-05-18T14:56:48+08:00",
       "note": "stage_passed"
     },
     "design": {
       "status": "passed",
       "owner": "Architect",
-      "updated_at": "2026-05-17T12:31:30+08:00",
+      "updated_at": "2026-05-18T14:56:48+08:00",
       "note": "stage_passed"
     },
     "code": {
       "status": "passed",
       "owner": "Implementer",
-      "updated_at": "2026-05-17T12:32:05+08:00",
+      "updated_at": "2026-05-18T14:56:48+08:00",
       "note": "stage_passed"
     },
     "test": {
       "status": "passed",
       "owner": "Tester",
-      "updated_at": "2026-05-17T12:32:54+08:00",
+      "updated_at": "2026-05-18T15:11:33+08:00",
       "note": "stage_passed"
     },
     "review": {
       "status": "passed",
       "owner": "Reviewer",
-      "updated_at": "2026-05-17T12:32:54+08:00",
+      "updated_at": "2026-05-18T15:11:33+08:00",
       "note": "stage_passed"
     },
     "pr": {
-      "status": "passed",
+      "status": "pending",
       "owner": "Release Manager",
-      "updated_at": "2026-05-17T12:38:17+08:00",
-      "note": "pr_created"
+      "updated_at": "2026-05-18T14:56:48+08:00",
+      "note": "pending_pr_creation"
     }
   }
 }

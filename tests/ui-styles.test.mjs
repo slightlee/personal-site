@@ -32,4 +32,18 @@ describe("ui style contract", () => {
     expect(css).toContain(".writing-item");
     expect(css).not.toMatch(/font-size:[^;]*vw/);
   });
+
+  it("protects the reference-inspired home and article layouts", async () => {
+    const css = await readFile("src/styles/global.css", "utf8");
+    const home = await readFile("src/pages/index.astro", "utf8");
+    const article = await readFile("src/pages/writing/[slug].astro", "utf8");
+
+    expect(home).toContain("notice-strip");
+    expect(home).toContain("home-layout");
+    expect(home).toContain("home-aside");
+    expect(article).toContain("article-layout");
+    expect(article).toContain("article-aside");
+    expect(css).toContain("grid-template-columns: minmax(0, 1fr) 296px");
+    expect(css).toContain("grid-template-columns: minmax(0, 769px) 304px");
+  });
 });
